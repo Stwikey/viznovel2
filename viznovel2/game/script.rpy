@@ -20,6 +20,8 @@ define unknown_girl = Character('???', color="#000000")
 define unknown_girl2 = Character('???', color="#914b4b")
 define unknown_boy = Character('???', color="#0b3b2e")
 define unknown_boy2 = Character('???', color="#0b3b2e")
+define charlie = Character('Charlie', color="#60288b")
+define unknown_girl3 = Character ('???',color="#5da0c4" )
 
 
 label start:
@@ -30,7 +32,8 @@ label start:
 
     you "Ugh."
 
-    "You look around. A INSERT SETTING HERE" #insert setting here
+    "You look around. It seems as though you are in the middle of a densely populated city. 
+    The cars speed past and you wonder what rush they must be in." #insert setting here
 
     #meeting the characters (maybe not all of them(?))
 
@@ -120,10 +123,120 @@ label absorb_magic: #will make this an actual mechanic later but I don't want th
 
     "The unknown boy shakes his head, confused."
 
-    jump part_2:
+    jump part_2
 
 label part_2:
-    "e"
+    "You watch as the boy gathers magical energy... it feels familliar, but you can't put your finger on it yet." 
+
+    unknown_boy2 "Haha! Told you I could do it!"
+
+    # not sure how we want to show this? also not sure where you were going with this ngl lol
+
+    unknown_girl2 "Okay I think if we go to the PLACEHOLDER" #come up with a good name for some spooky location 
+
+    "You get this cold feeling, as fragmented memories flash through your head."
+
+    "CHARLIE STOP IT, YOU'LL DIE!" # put this in quotes mysteryyyy
+
+    you "Who the hell is Charlie?" 
+    
+    "You are brought back to the present, but there are still many missing pieces." 
+
+    unknown_boy "Are you sure? Even the professors don't go up there..." 
+
+    unknown_girl "Don't tell me you're chickening out now? We said we would get 100 on this project, so we are guaranteeing that 100."
+
+    menu:
+        #both end in the characters dying
+        "Try to warn them":
+            jump danger
+        
+        "Do nothing":
+            jump oblivious
+label danger: 
+    "You concentrate hard as you try your best to warn them, shouting at the top of your lungs."
+
+    show sora silly
+
+    you "STOP DON'T GO!" 
+
+    "You jump right in the middle of the group, waving your arms around to get someones attention."
+
+    "The group continues to chatter, blissfully unaware of your attempts to contact them."
+    
+    you "I don't know why I try, they can't see or hear me. I can't save them if I continue like this."
+
+    jump part_3
+
+label oblivious:
+    "You watch as they leave. Chattering away about their plans, maybe it was just a one off feeling." 
+
+    "But as you continue to wander around the city, the sinking feeling in your stomach continues to eat away at you."
+
+    jump part_3
+
+label part_3: 
+    # basically learn a bit about who charlie is in this universe 
+    "You continue to wander around, walking through the street."
+    you "Who is Charlie? And what was he doing..."
+    
+    you "Something is going to destroy this world, I know I'm not a mortal like those kids from earlier." 
+
+    "Suddenly as you pass by a cafe, you catch a fragment of a conversation."
+
+    show unknown_girl3 angry
+    unknown_girl3 "Charlie I told you, you need to give it up. I'm tired of hearing about your stupid conspiricy theories."
+
+    show charlie angry
+    charlie "And I'm telling you, it's not a conspiracy! The world is ending and I don't know how to stop it!"
+
+    unknown_girl3 "Can you just drop it. Mom and Dad are worried, you stopped returning your calls, you stopped going out with me for drinks, it's like I don't even know you anymore."
+
+    show charlie aloof 
+    charlie "I'll be fine."
+
+    unknown_girl3 "No you aren't! You've been like this ever since-"
+
+    charlie "Don't drag her into this."
+
+    unknown_girl3 "You have to let go eventually."
+
+    charlie "No. I don't. It was nice meeting with you sis, I'm going to leave now." 
+
+    you "Charlie... I have to follow him."
+
+    "You follow Charlie out of the cafe as he makes his way through the city."
+
+    "You can't help but instinctively walk beside him, a part of you finds it familliar."
+
+    charlie "What am I even doing..."
+
+    "Charlie continues to mumble to himself as he continues to walk down the street." 
+
+    charlie "I mean, you heard what she said, and I know maybe I am too deep into this."
+
+    charlie "But how couldn't I be, especially when..."
+
+    show charlie turned towards you
+
+    "You feel chills run down your body as he turned to look in your direction. You stop walking as he stares right into your eyes."
+
+    "He can see you?!"
+
+    show charlie laughing
+
+    charlie "Who am I kidding, it's not like you're listening. But I like to imagine you are."
+
+    "He laughs to himself, there's something in you that can't help but chuckle at the sight."
+
+    "Charlie makes his way to a small cemetary on the outter parts of the city." #my spelling bad help
+
+    charlie "I'm sorry I haven't been visiting as often as I used to."
+
+    charlie "But I hope you understand, I'm trying to continue where we left off."
+
+
+
 
 
 
