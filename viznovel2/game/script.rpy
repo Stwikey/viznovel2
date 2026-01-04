@@ -1,108 +1,150 @@
 ﻿'''
 Summary:
 
-You are a higher power (angel? someone from the future? ghost?) that knows that the world is going 
-to end (but lost your memories?). You do not have a direct effect on the world but you watch as the characters play out 
-their lives.
+You are a murdered student who was part of a student adventuring party when you were alive. 
+You have no past memories of who you were and what happened but you do know that the world
+will end soon if nothing happens.
 
-You can choose to give the characters visions/prophecies/different items but make sure to choose the
-correct one otherwise the world will end.
+Learn more about the characters & figure out if they are bad/good (figure out who murdered you)
+and guide correct characters to possibly change the future.
 
 Genre:
 Fantasy
+
+Setting:
+Historical, rural, magic academy
 '''
 
 #defining characters
 default mana = 0
 define you = Character('You', color="#ffffff")
-define sora = Character('Sora', color="#2a0f26")
-define unknown_girl = Character('???', color="#000000")
-define unknown_girl2 = Character('???', color="#914b4b")
-define unknown_boy = Character('???', color="#0b3b2e")
-define unknown_boy2 = Character('???', color="#0b3b2e")
-define charlie = Character('Charlie', color="#60288b")
-define unknown_girl3 = Character ('???',color="#5da0c4" )
+
+define faerin = Character('Faerin')
+#emo, introverted, deadpan, textbook magic, good at studies, goes insane later maybe, rival of mc(?) <-- makes people sus her
+
+define zaelf = Character('Zaelf')
+#also introverted, mute, dark magic <-- makes people sus him(?)
+
+define io = Character('Io')
+#extrovert, outgoing girl, sus magic 
+#possibly ur murderer (?) try to make her least expected :0 <-- could change but idk a better character that could fit rn
 
 
+define uxie = Character('Uxie')
+#you, DEAD, possibly had powerful magic when you were still alive <-- why they killed you(?)
+#maybe you are hexarias daughter/vessel though not sure what that would mean
+
+define azer = Character('Azer')
+#stereotypical aloof guy, can get scared for his life which makes him more selfish <-- makes people sus him 
+
+#lowkey want to make both sides of the story morally gray so the player has a harder time to choose which side to help
+define faerin_unknown = Character('???', color="#000000")
+define io_unknown = Character('???', color="#914b4b")
+define azer_unknown = Character('???', color="#0b3b2e")
+define zaelf_unknown = Character('???', color="#0b3b2e")
+define helio = Character('Helio', color="#60288b") #helioptile
+define helio_unknown = Character ('???',color="#5da0c4" )
+define unknown_girl3 = Character('???')
+
+#vision/introduction
 label start:
-    #waking up to prophecy of the world ending
-    '''vision of the apocaplyse/future'''
+    #cutscene of vision
+    "Hazy images of supernatural creatures grabbing students by the throat fill your vision."
+
+    "Large flames roar in the background, unable to muffle the screaming voices of the students."
+
+    "One of the creatures stare directly at you"
+
+    #waking up
 
     "You wake up with a sharp pang in your head."
 
     you "Ugh."
 
-    "You look around. It seems as though you are in the middle of a densely populated city. 
-    The cars speed past and you wonder what rush they must be in." #insert setting here
+    "You find yourself laying on a grassy field. Plants and flowers rustle in the wind."
 
-    #meeting the characters (maybe not all of them(?))
-
+    "You can feel their magic pulsating through the air, as they breathe."
+#choice to recall memories
 menu: 
         "Try to remember what happened.":
-            jump introduction
-
+            jump memories
+#trying to recall memories but can't
+label memories:
+    "You tried to recall what happened, you search your mind for something, anything, to explain who you are, and what you are doing but to no avail."
+        jump introduction
+#introduction to the student's names & personalities
 label introduction:
-    "You can hear voices nearby, getting louder and louder as they approach you."
+    "You begin hear voices nearby, getting louder and louder as they approach you."
 
-    show sora surprise  
+    show io surprise  
 
-    unknown_girl "Hey! Look over here!"
+    io_unknown "Hey! Look over here!"
 
-    "She runs over to you, three other figures running to catch up to her."
-    show sora happy
+    "The unknown girl runs over to where you are laying, three other figures running to catch up to her."
+    
+    show io happy
 
-    unknown_girl "It's the INSERT IMPORTANT FLOWER OR INGREDIENT OR SOMETHING!"
+    io_girl "Ah! Found it! Hexaria's Flower!" #hexaria is the goddess who gifted the world magic, so the flower is extremely rare to find for some reason (idk) also important bc maybe it leads to the worlds downfall
 
-    "The girl peers over, staring directly at you and pointing almost past you."
+    "The girl peers over, staring directly at you, face almost touching yours and pointing almost past you."
 
-    show unknown_girl2 neutral
+    you "!"
 
-    unknown_girl2 "We can't use those Sora."
+    you "Can she not see me?"
 
-    "The *other* (IDK) girl bends forward, face almost touching yours and her hand reaches past you."
+    show faerin neutral
 
-    you "What?" #this is when you notice they don't see u or wtv
+    faerin_unknown "We can't use those Io."
 
-    show unknown_girl2 holding_flower
+    "The other unknown girl bends forward, her hand reaches past you."
+
+    you "!" 
+
+    show faerin holding_flower
 
     "When she pulls her hand out, she is holding a small, wilted flower." #cutscene instead of words maybe
     
-    unknown_girl2 "This flower's magic is almost out." #aka its dying
+    faerin_unknown "This flower's magic is almost out." #aka its dying
 
-    unknown_girl2 "Weird. It's almost as if someone sat on this whole patch of grass."
+    faerin_unkown "Weird. It's almost as if someone sat on this whole patch of grass."
 
     "The girl traces in the air, circling the perimeter around where you are laying."
 
-    show unknown_boy angry
+    faerin_unknown "Look, all the plants here are crushed."
 
-    unknown_boy "Ugh! It must've been those first years again!"
+    show azer angry
 
-    unknown_boy "Professor's gonna scold us again for sure and it's not even my fault this time!"
+    azer_unknown "Ugh! It must've been those first years again!"
 
-    show sora casting
+    azer_unknown "Professor Fiddlesticks is going to scold us again for sure and it's not even my fault this time!"
 
-    sora "Wait! let me try something."
+    faerin_unknown "..."
 
-    unknown_girl2 "Don't. You shouldn't use your magic on this sort of thing."
+    show io casting
 
-    unknown_girl2 "Plus, the Professor always knows when magic is used to tamper things. This flower is already dead."
+    io "Faerin wait! let me try something."
 
-    "The flower distintegrates in the girl's hand. Black ashes float up and scatter across the field."
+    faerin "Don't. You shouldn't use your magic on this sort of thing." #foreshadowing that io has sus magic(?)
 
-    sora "Awww alright. But where are we supposed to find more?"
+    faerin "Plus, the Professor always knows when magic is used to tamper things. This flower is already dead." #hints that magic shouldn't be used to revive things (not sure why yet tho)
+
+    "The flower distintegrates in faerin's hand. Black ashes float up and scatter across the field."
+
+    io "Awww alright. But where are we supposed to find more?"
     
-    unknown_boy "Yeah !it already took us half the time to find this one patch!"
+    azer_unknown "Yeah !it already took us half the time to find this one patch!"
 
-    unknown_boy "Ugh! I'm going to file a report against those first years."
+    azer_unknown "Ugh! I'm going to file a report against those first years."
 
-    unknown_girl2 "Calm down, we still have time."
+    faerin "Azer."
 
-    unknown_girl2 "NAME do you have enough magic to cast another spell?"
+    faerin "Calm down, we still have time."
 
-    "unknown_boy2 nods."
+    faerin "Zaelf, do you have enough magic to cast another spell?"
 
-    "Unkown_boy2 concentrates, you can feel magic flowing in the air intensely."
+    "Zaelf nods."
 
+    "Zaelf concentrates, you can feel magic flowing in the air intensely."
 #taking magic mechanic introduction
 menu: 
     "Absorb some of the magic":
@@ -125,14 +167,15 @@ label absorb_magic: #will make this an actual mechanic later but I don't want th
 
     jump part_2
 
+#going to someplace to look at more flowers
 label part_2:
     "You watch as the boy gathers magical energy... it feels familliar, but you can't put your finger on it yet." 
 
-    unknown_boy2 "Haha! Told you I could do it!"
+    zaelf "..."
 
-    # not sure how we want to show this? also not sure where you were going with this ngl lol
+    "Zaelf nods again, towards the direction of a forest."
 
-    unknown_girl2 "Okay I think if we go to the PLACEHOLDER" #come up with a good name for some spooky location 
+    io "PLACEHOLDER?" #come up with a good name for some spooky location 
 
     "You get this cold feeling, as fragmented memories flash through your head."
 
@@ -142,7 +185,7 @@ label part_2:
     
     "You are brought back to the present, but there are still many missing pieces." 
 
-    unknown_boy "Are you sure? Even the professors don't go up there..." 
+    azer "Are you sure? Even the professors don't go up there..." 
 
     unknown_girl "Don't tell me you're chickening out now? We said we would get 100 on this project, so we are guaranteeing that 100."
 
@@ -153,6 +196,8 @@ label part_2:
         
         "Do nothing":
             jump oblivious
+
+
 label danger: 
     "You concentrate hard as you try your best to warn them, shouting at the top of your lungs."
 
@@ -236,6 +281,19 @@ label part_3:
     charlie "But I hope you understand, I'm trying to continue where we left off."
 
 
+#character background info, could probably split these into multiple parts that you find out later
+#(don't have to discover all of their full backstories, player should want to choose who they think the imposter is)
+label io_story:
+
+label faerin_story:
+
+label zaelf_story:
+
+label azer_story:
+
+label uxie_story:
+
+label helio_story:
 
 
 
