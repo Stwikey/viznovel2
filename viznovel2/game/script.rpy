@@ -29,7 +29,6 @@ define io = Character('Io')
 #extrovert, outgoing girl, sus magic 
 #possibly ur murderer (?) try to make her least expected :0 <-- could change but idk a better character that could fit rn
 
-
 define uxie = Character('Uxie')
 #you, DEAD, possibly had powerful magic when you were still alive <-- why they killed you(?)
 #maybe you are hexarias daughter/vessel though not sure what that would mean
@@ -37,12 +36,17 @@ define uxie = Character('Uxie')
 define azer = Character('Azer')
 #stereotypical aloof guy, can get scared for his life which makes him more selfish <-- makes people sus him 
 
+define higeki = Character('Higeki') #CHARLIE REPLACEMENT NAME (???)
+#replacement for charlie name to fit theme more lol lmk if this is ok replacement name cus idrk? 
+#knows what happened and refuses to let go of the past while all the others did, depressed guy 
+
 #lowkey want to make both sides of the story morally gray so the player has a harder time to choose which side to help
 define faerin_unknown = Character('???', color="#000000")
 define io_unknown = Character('???', color="#914b4b")
 define azer_unknown = Character('???', color="#0b3b2e")
 define zaelf_unknown = Character('???', color="#0b3b2e")
-define helio = Character('Helio', color="#60288b") #helioptile
+define helio = Character('Helio', color="#60288b") #helioptile 
+# helio is also the corn god from d20 :D
 define helio_unknown = Character ('???',color="#5da0c4" )
 define unknown_girl3 = Character('???')
 
@@ -71,7 +75,7 @@ menu:
 #trying to recall memories but can't
 label memories:
     "You tried to recall what happened, you search your mind for something, anything, to explain who you are, and what you are doing but to no avail."
-        jump introduction
+    jump introduction
 #introduction to the student's names & personalities
 label introduction:
     "You begin hear voices nearby, getting louder and louder as they approach you."
@@ -84,7 +88,7 @@ label introduction:
     
     show io happy
 
-    io_girl "Ah! Found it! Hexaria's Flower!" #hexaria is the goddess who gifted the world magic, so the flower is extremely rare to find for some reason (idk) also important bc maybe it leads to the worlds downfall
+    io_unknown "Ah! Found it! Hexaria's Flower!" #hexaria is the goddess who gifted the world magic, so the flower is extremely rare to find for some reason (idk) also important bc maybe it leads to the worlds downfall
 
     "The girl peers over, staring directly at you, face almost touching yours and pointing almost past you."
 
@@ -106,7 +110,7 @@ label introduction:
     
     faerin_unknown "This flower's magic is almost out." #aka its dying
 
-    faerin_unkown "Weird. It's almost as if someone sat on this whole patch of grass."
+    faerin_unknown "Weird. It's almost as if someone sat on this whole patch of grass."
 
     "The girl traces in the air, circling the perimeter around where you are laying."
 
@@ -157,13 +161,13 @@ label absorb_magic: #will make this an actual mechanic later but I don't want th
     "It feels natural, and you realize how deprived your body is of magic." #em fix
     "You grasp hungrily at the magic in the air."
 
-    unknown_boy2 "!"
+    azer "!"
 
     "The boy stares directly at you and you feel the magic in the air snap back."
 
-    unknown_girl "What happened?"
+    io "What happened?"
 
-    "The unknown boy shakes his head, confused."
+    "Azer shakes his head, confused."
 
     jump part_2
 
@@ -195,7 +199,7 @@ label part_2:
 
     faerin "Professor Fiddlesticks said that Hexaria's flower is extremely important to the academy's operation..."
 
-    faerin "If we fail we may have to retake the magic exam" #something or other
+    faerin "If we fail we may have to retake the magic exam." #something or other
 
     azer "fine...."
 
@@ -234,6 +238,7 @@ label oblivious:
 label part_3: 
     # basically learn a bit about who charlie is in this universe 
     "You continue to wander around, walking through the street."
+
     you "Who is Charlie? And what was he doing..."
     
     you "Something is going to destroy this world, I know I'm not a mortal like those kids from earlier." 
@@ -259,7 +264,9 @@ label part_3:
 
     charlie "No. I don't. It was nice meeting with you sis, I'm going to leave now." 
 
-    you "Charlie... I have to follow him."
+    you "Charlie..." 
+
+    you "I have to follow him."
 
     "You follow Charlie out of the cafe as he makes his way through the city."
 
@@ -285,26 +292,84 @@ label part_3:
 
     "He laughs to himself, there's something in you that can't help but chuckle at the sight."
 
-    "Charlie makes his way to a small cemetary on the outter parts of the city." #my spelling bad help
+    "Charlie makes his way to a small cemetary on the outter parts of the city." 
 
     charlie "I'm sorry I haven't been visiting as often as I used to."
 
     charlie "But I hope you understand, I'm trying to continue where we left off."
 
+    charlie "I hate them."
+
+    charlie "I know you said not to, but I hate them."
+
+    charlie "I hate the way they get to continue walking around, even after all they did." #this is first implication that the group was the cause of your death
+
+    charlie "And I hate you."
+
+    charlie "I hate that you left me alone, to deal with all of this."
+
+    you "Charlie... I'm sorry, I don't remember what happened"
+
+    you "but I promise I'll figure it out."
+
+    charlie "I heard they are going to PLACEHOLDER. Idiots." #the spooky location from intro scene 
+
+    charlie "They are going to get themselves killed. As if one wasn't enough might as well make it the rest of the party." #more implication 
+
+    you "The group from earlier... they were going to PLACEHOLDER."
+
+    menu: 
+        "Stay by Charlie's side.":
+            jump stay
+        
+        "Try to track down the adventuring group from earlier.":
+            jump track
+
+# maybe when 
+label stay:
+    you "I can't leave him now."
+
+
+label track: 
+    you "I can't be wasting time, I have to find them."
+
+    "You leave the cemetary in search of the group from earlier."
+
+    #we could add a flash back here to earlier opening scene where the people phased through 
+
+    you "They mentioned finding a flower."
+
+    you "lore here " # put logistics of opening scene 
+
+
+
+
 
 #character background info, could probably split these into multiple parts that you find out later
 #(don't have to discover all of their full backstories, player should want to choose who they think the imposter is)
 label io_story:
+    "..."
+
+    io "Uxie I promise it'll be fun!"
+
+    uxie "I'm not sure..."
+
+    uxie "I don't really do outings."
 
 label faerin_story:
+    "..."
 
 label zaelf_story:
+    "..."
 
 label azer_story:
+    "..."
 
 label uxie_story:
+    "..."
 
 label helio_story:
+    "..."
 
 
 
