@@ -185,12 +185,23 @@ label part_2:
     
     "You are brought back to the present, but there are still many missing pieces." 
 
+    show azer nervous
+
     azer "Are you sure? Even the professors don't go up there..." 
 
-    unknown_girl "Don't tell me you're chickening out now? We said we would get 100 on this project, so we are guaranteeing that 100."
+    io "Don't tell me you're chickening out now? We said we would get 100 on this project, so we are guaranteeing that 100."
+
+    "Faerin sighs"
+
+    faerin "Professor Fiddlesticks said that Hexaria's flower is extremely important to the academy's operation..."
+
+    faerin "If we fail we may have to retake the magic exam" #something or other
+
+    azer "fine...."
+
+    zaelf "..."
 
     menu:
-        #both end in the characters dying
         "Try to warn them":
             jump danger
         
