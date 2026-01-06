@@ -78,7 +78,7 @@ label memories:
     jump introduction
 #introduction to the student's names & personalities
 label introduction:
-    "You begin hear voices nearby, getting louder and louder as they approach you."
+    "You begin to hear voices nearby, getting louder and louder as they approach you."
 
     show io surprise  
 
@@ -136,7 +136,7 @@ label introduction:
 
     io "Awww alright. But where are we supposed to find more?"
     
-    azer_unknown "Yeah !it already took us half the time to find this one patch!"
+    azer_unknown "Yeah! It already took us half the time to find this one patch!"
 
     azer_unknown "Ugh! I'm going to file a report against those first years."
 
@@ -179,15 +179,15 @@ label part_2:
 
     "Zaelf nods again, towards the direction of a forest."
 
-    io "PLACEHOLDER?" #come up with a good name for some spooky location 
+    io "Willowsburrow?" #come up with a good name for some spooky location (is this ok?)
 
     "You get this cold feeling, as fragmented memories flash through your head."
 
-    "CHARLIE STOP IT, YOU'LL DIE!" # put this in quotes mysteryyyy
+    "\"CHARLIE STOP IT, YOU'LL DIE!\"" # put this in quotes mysteryyyy
 
     you "Who the hell is Charlie?" 
     
-    "You are brought back to the present, but there are still many missing pieces." 
+    "You are brought back to the present, but there are still many missing memories." 
 
     show azer nervous
 
@@ -199,7 +199,7 @@ label part_2:
 
     faerin "Professor Fiddlesticks said that Hexaria's flower is extremely important to the academy's operation..."
 
-    faerin "If we fail we may have to retake the magic exam." #something or other
+    faerin "If we fail we may have to retake the magic exam. Or worse, we face expulsion." #something or other
 
     azer "fine...."
 
@@ -216,13 +216,15 @@ label part_2:
 label danger: 
     "You concentrate hard as you try your best to warn them, shouting at the top of your lungs."
 
-    show sora silly
+    show io silly
 
     you "STOP DON'T GO!" 
 
     "You jump right in the middle of the group, waving your arms around to get someones attention."
 
     "The group continues to chatter, blissfully unaware of your attempts to contact them."
+
+    io "Well we better go! Let's not worry too much and try to enjoy the assignment. Professor said we should be more focused on learning anyways."
     
     you "I don't know why I try, they can't see or hear me. I can't save them if I continue like this."
 
@@ -239,7 +241,7 @@ label part_3:
     # basically learn a bit about who charlie is in this universe 
     "You continue to wander around, walking through the street."
 
-    you "Who is Charlie? And what was he doing..."
+    you "Who is Charlie? And what was he doing..." #change his name 
     
     you "Something is going to destroy this world, I know I'm not a mortal like those kids from earlier." 
 
@@ -258,10 +260,12 @@ label part_3:
 
     unknown_girl3 "No you aren't! You've been like this ever since-"
 
+    show charlie angry
     charlie "Don't drag her into this."
 
     unknown_girl3 "You have to let go eventually."
 
+    show charlie calmer
     charlie "No. I don't. It was nice meeting with you sis, I'm going to leave now." 
 
     you "Charlie..." 
@@ -312,11 +316,11 @@ label part_3:
 
     you "but I promise I'll figure it out."
 
-    charlie "I heard they are going to PLACEHOLDER. Idiots." #the spooky location from intro scene 
+    charlie "I heard they are going to Willowsburrow. Idiots." #the spooky location from intro scene 
 
     charlie "They are going to get themselves killed. As if one wasn't enough might as well make it the rest of the party." #more implication 
 
-    you "The group from earlier... they were going to PLACEHOLDER."
+    you "The group from earlier... they were going to Willowsburrow."
 
     menu: 
         "Stay by Charlie's side.":
@@ -325,11 +329,13 @@ label part_3:
         "Try to track down the adventuring group from earlier.":
             jump track
 
-# maybe when 
+# when staying we learn about how the flower contributes to their goal and the mission they are on but we will be late or possibly miss the opening to try to intervene 
 label stay:
     you "I can't leave him now."
 
+    you "He might know more information about the world ending. And if what he's saying is true I need to prevent it from happening."
 
+#when leaving we will find the group but have no idea what their goals or plans are 
 label track: 
     you "I can't be wasting time, I have to find them."
 
@@ -339,11 +345,132 @@ label track:
 
     you "They mentioned finding a flower."
 
-    you "lore here " # put logistics of opening scene 
+    you "If I could figure out what it was used for, I could find help!"
+
+    you "I have magical ablities, and my interactions with this world are uncertain."
+
+    #recall the scene from earlier where when you sat down the grass and stuff flattened 
+
+    you "But it seems like I can interact with things... just not people?"
+
+    "You look down to see a bug crawling inbetween the cracks of the sidewalk."
+
+    menu: #both result in same findings just fun interactive part 
+        "Try to squish it with your foot.":
+            jump murderer
+
+        "Try to pick it up.":
+            jump pacifist
+label murderer: 
+    "You raise your foot, stomping down hard on the spot where the bug was."
+
+    "To your surprise the bug crawls through, not being affected by your pressance."
+
+    jump part_4
+
+label pacifist: 
+    "You lower your hand, extending a finger in the direction the bug is crawling in."
+
+    "To your surprise, it walks through, not being affected by your pressance."
+
+# when you catch up with the party different depending on if you stayed behind to learn more or rushed to stop them 
+label part_4: 
+    unknown_girl3 "Did you hear about the party going to Willowsburrow?" #unknown is just placeholder, too lazy to make ?? characters rn
+
+    unknown "It was probably Faerin's idea, you know her repuation at the school."
+
+    unknown "I'm surpirsed Azer didn't fight it harder, we all know he's a scardy cat when it comes to danger."
+
+    unknown "As if one tradgey wasn't enough for them."
+
+    "The student scoffs, he seemed younger than the party from earlier."
+
+    unknown "Maybe you shouldn't be so quick to judge, I mean, we haven't even gone on an adventure yet."
+
+    unknown "No one has, the school practically banned it for lower years ever since-"
+
+    unknown "Ugh stop talking! Just thinking about it give me the heebie jeebies."
+
+    show unknown person taunting other person
+    unknown "Who knows maybe she's haunting you right now~"
+
+    unknown "Shut up! I can't stand being around you."
+
+    "The girl storms away, as the boy chases after her."
+
+    menu: 
+        #two pathways, first one just more explicit in giving information to the player, second is basically a time saver
+        "Try to piece together clues.":
+            jump detective
+
+        "Wander around the city in search for a map.":
+            jump explore
+
+label detective: 
+    "There was an incident that occured at the school." #can flash images of the boy at the cemetary
+
+    "Ever since then, younger years have been forbidden from doing adventures." #show image of the unknown people talking from earlier
+
+    "But the party from earlier were still conducting adventures." #show flashes of faerin, azer, etc. 
+
+    "The best conclusion I can come up with is that..."
+
+    "The adventuring party from earlier orginally had one more member."
+
+    you "The best place to find information would be a library of some sort."
+
+    you "From what I've gathered, it seems like I can interact with inanimate objects and plants." #conclusion i drew, feel free to change
+
+    jump explore
+
+label explore: 
+    "The signs posted all over the city prove useful as they eventually lead you into the direction of a library."
+
+    "The library was empty, as the sun set in the city."
+
+    "Looking around, there was a librarian cataloging books while grumbling under her breath." #MY SPELLIGN HELP
+
+    menu: 
+        "Approach the librarian":
+            jump part_5
 
 
+label part_5:
+    #idea that i have feel free to use or throw away
+    #mc goes to library and finds book on the hexaria flower 
+    #maybe the reason why the adventuring party is so like set on this mission is that they are under the belief that it can ressurect people 
+    #or can make them all like bad people and they all it in for the grade and sacrificed you on purpose
+    #hexaria's flower similar to the one in tangled where in a sense it has incrediable healing ablities and is rumoured to be able to ressurect when combined with dark magic???
+    #extremely risky as when you go onto the path of ressurection you trap the dead person in a limbo. (which could be what the mc is experincing rn)
+    #mc finds only about the healing ablities or can find out about the whole thing depending on how long gameplay wants to be
+    
+    librarian "Those kids... they sign out the books and have the nerve to return it 2 weeks past the due date. If it wasn't Professor Fiddlesticks that sent them on the mission I would've given them detention."
+    #i imagine to an old lady with reading glasses with the beads that connect so that when they fall it just dangles like a necklace 
+    #wears probably a really burgandy cardigan, with a cup of steeped tea, and a pamphlet for mental health reasources that no one takes on the table
+    
+    you "Professor Fiddlesticks..."
 
+    you "The group from earlier... that had to be it."
 
+    "You glance at the table, seeings the front cover of a bright yellow flower, its petals opened all the way exposing an unique white center."
+
+    you "I can't sign the book out... so I have to steal it."
+
+    "You walk over to a shelf, sticking your arm out and knocking all the books off."
+
+    "BANG"
+
+    librarian "!"
+
+    show librarian angry
+
+    librarian "How many times have I told those first years to be careful!"
+
+    hide librarian
+
+    "You manage to quickly take the book and slip out of the library."
+
+    #continue 
 
 #character background info, could probably split these into multiple parts that you find out later
 #(don't have to discover all of their full backstories, player should want to choose who they think the imposter is)
@@ -359,8 +486,36 @@ label io_story:
 label faerin_story:
     "..."
 
+    unknown_helio "Faerin, excellent work as always!" #using helio for now feel free to change later just using this as prof varible 
+
+    "The professor hands back the marked assignment to Faerin, a big \"100\" scrawled on the front page in bright red ink."
+
+    unknown_helio "Good on paper Uxie... but no practical application."
+
+    "Uxie stared down at the paper, a 74 inked with red pen stared back at her."
+
+    faerin "..."
+
+    "Faerin stares at you, sliding over her paper in exchange for yours." # gonna assume mc knows they are Uxie at this point in time but works either way just lmk and i fix
+
+    uxie "Oh, yeah you can take mine." 
+
+    "Faerin doesn't reply as she begins flipping through your work, scrawling corrections with her own pencil."
+
+    show faerin emotionless
+    faerin "It makes sense in theory, they just want you to do it this way. Textbook says so."
+
+    "She seems to be indifferent about this whole situation as a whole. Seemingly only curious at the fact that you had something written not from the textbook."
+
+    uxie "We should go. They are probably waiting for us."
+
+    "You don't bother to put any effort into making yourself more amiable towards her, not like she would care regardless."
+
+    #more story here dunno where im going with this ngl
+
 label zaelf_story:
     "..."
+    
 
 label azer_story:
     "..."
