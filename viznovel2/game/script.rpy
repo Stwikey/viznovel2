@@ -46,18 +46,36 @@ define io_unknown = Character('???', color="#914b4b")
 define azer_unknown = Character('???', color="#0b3b2e")
 define zaelf_unknown = Character('???', color="#0b3b2e")
 define helio = Character('Helio', color="#60288b") #helioptile 
-# helio is also the corn god from d20 :D
+# helio is also the corn god from d20 :D <-  everything goes back to dropout :sob:
 define helio_unknown = Character ('???',color="#5da0c4" )
 define unknown_girl3 = Character('???')
+define unknown = Character('???')
 
-#vision/introduction
+define hexaria = Character('Hexaria')
+define huntsman = Character('Huntsman')
+
+define io_mom = Character('Io\'s Mom')
+define io_dad = Character('Io\'s Dad')
+
+
+
+#vision of apocalypse/introduction
 label start:
     #cutscene of vision
+
+    show vision_1
+
     "Hazy images of supernatural creatures grabbing students by the throat fill your vision."
 
-    "Large flames roar in the background, unable to muffle the screaming voices of the students."
+    show vision_2
 
-    "One of the creatures stare directly at you"
+    "Large flames roar in the background, unable to muffle the screaming voices of the students."
+    
+    show vision_3
+
+    "One of the creatures stares directly at you"
+
+    play sound "hiss"
 
     #waking up
 
@@ -70,15 +88,23 @@ label start:
     "You can feel their magic pulsating through the air, as they breathe."
 #choice to recall memories
 menu: 
-        "Try to remember what happened.":
-            jump memories
-#trying to recall memories but can't
+    "Try to remember what happened.":
+        jump memories
+#trying to recall memories but can't remember anything about yourself
 label memories:
     "You tried to recall what happened, you search your mind for something, anything, to explain who you are, and what you are doing but to no avail."
+
+    you "Who am I? I can't remember my name..."
+
+    you "Where am I...?"
+
+    you "Ugh my head hurts."
+
     jump introduction
 #introduction to the student's names & personalities
 label introduction:
-    "You begin to hear voices nearby, getting louder and louder as they approach you."
+    
+    "You begin to hear voices nearby and footsteps that get louder and louder as they approach you."
 
     show io surprise  
 
@@ -179,7 +205,9 @@ label part_2:
 
     "Zaelf nods again, towards the direction of a forest."
 
-    io "Willowsburrow?" #come up with a good name for some spooky location (is this ok?)
+    io "Willowsburrow?"
+
+    "A familiar feeling rushes through your mind."
 
     "You get this cold feeling, as fragmented memories flash through your head."
 
@@ -190,8 +218,6 @@ label part_2:
     "You are brought back to the present, but there are still many missing memories." 
 
     show azer nervous
-
-    azer "Are you sure? Even the professors don't go up there..." 
 
     io "Don't tell me you're chickening out now? We said we would get 100 on this project, so we are guaranteeing that 100."
 
@@ -361,6 +387,7 @@ label track:
 
         "Try to pick it up.":
             jump pacifist
+
 label murderer: 
     "You raise your foot, stomping down hard on the spot where the bug was."
 
@@ -474,7 +501,7 @@ label part_5:
 
 #character background info, could probably split these into multiple parts that you find out later
 #(don't have to discover all of their full backstories, player should want to choose who they think the imposter is)
-label io_story:
+label io_story_1:
     "..."
 
     io "Uxie I promise it'll be fun!"
@@ -483,7 +510,8 @@ label io_story:
 
     uxie "I don't really do outings."
 
-label faerin_story:
+
+label faerin_story_1:
     "..."
 
     unknown_helio "Faerin, excellent work as always!" #using helio for now feel free to change later just using this as prof varible 
@@ -513,18 +541,141 @@ label faerin_story:
 
     #more story here dunno where im going with this ngl
 
-label zaelf_story:
-    "..."
-    
-
-label azer_story:
+label zaelf_story_1:
     "..."
 
-label uxie_story:
+label azer_story_1:
     "..."
 
-label helio_story:
+label uxie_story_1:
     "..."
+
+label helio_story_1:
+    "..."
+
+#the group comes back,, too lazy to write the stuff that happens before lol
+label arrival:
+
+
+
+#io disappears 
+label io_story_2:
+    "You rush after Io as she disppears into the forest, leaving the others behind."
+
+    you "I'm worried about them but... I need to know what is happening with Io."
+
+    "Sparks of magic burst unexpectedly from Io's fingers and she winces in pain"
+
+    io "UGH why is it malfunctioning now?!"
+
+
+#possible ending 1 iea: u are hexaria and u get resurrected but you are blinded by rage so the vision comes true & you destroy everything
+
+#hexaria's backstory, fell in love with a mortal who died eventually and did not want to spend immortality with her, hexaria's tears created magical plants known as hexaria's flowers that were abundant in magical energy. 
+#hexaria ended up cursing his bloodline (? maybe?) 
+label hexaria_story: #NOT FINISHED
+
+    "Hexaria was a loving Goddess who loved to travel to the mortal realm and the mortals loved her."
+
+    "They tossed baskets of flower petals in which she danced in, and granted wishes to the people."
+
+    "One day, when she was wandering through the woods, she met a huntsman who mistakened for a lost girl."
+
+    "He helped her into his home in the woods and fed her."
+
+    "Hexaria found this silly, she was a Goddess after all. However, for once in her life time she was the one who was being taken care of, and she felt warmer than ever."
+
+    "Hexaria fell in love with the huntsman and soon after, they promised each other with the rest of their lives."
+
+    "However as time went on, it was clear that they were of different worlds."
+
+    show hexaria holding basket of apples
+
+    hexaria "I'm backkkkkk, we can make apple pie for dessert today!"
+
+    hexaria "?"
+
+    hexaria "Hey why is your hair turning gray? You look... different"
+
+    huntsman "haha... did it really take you this long to notice?"
+
+    huntsman "as for you, you haven't changed one bit"
+
+    #hexaria tries to use her magic to keep him as alive as possible but he starts decomposing lollll
+    #he tells hexaria he wants to be free and hexaria gets angry cus she thinks he doesnt love her anymore
+    #hexaria CRASHES OUT cus HE DIES
+
+    "hexaria fell into a deep sadness and her tears rained down the skies for 32 days"
+
+    "from the rain a new species of flower was discovered, named as hexaria's flower"
+
+    "from that day on hexaria disappeared and no longer visited the mortal realm"
+
+#cut backstories up into parts later
+label io_backstory:
+    "Io grew up in a small neighbourhood and lived a normal childhoom, at least she thought it was normal to her."
+
+    show io dad smile
+
+    io_dad "Io! come here! want to see something cool?"
+
+    io "yeah!"
+
+    "io's dad flicks his wrist, and with a concluding snap, bubbles begin rising from the dew on the grass"
+
+    io "Wow! Dad this is so cool!"
+
+    io "How did you do that? I wanna know I wanna know!"
+
+    io_dad "This, Io, is called magic."
+
+    io_dad "It makes what seems impossible possible and it was a gift that came from the great Goddesss Hexaria."
+
+    "Io's mom smiles nervously"
+
+    "Io grins widely"
+
+    io "WOW! Can you teach me how?"
+
+    "Io's dad smiles weakly and ruffles his daughter's hair"
+
+    io_dad "haha not now honey, maybe when you're older." 
+
+    "Io jumps with excitement and runs away, going to play with her dinosaur toys."
+
+    "Her mom pulls her dad to the side."
+
+    io_mom "Why would you tell her about magic?"
+
+    io_dad "She's going to find out eventually."
+
+    io_dad "Magic is simply used too mnuch everywhere."
+
+    "Io's mom sighs and looks down."
+
+    io_mom "What will happen when she finds out that she can't use magic? Her greatest dream is to become a mage."
+
+    io_dad "It'll be fine. I promise."
+
+    #io gets magic artificially from a underground faction without her parents knowing (unstable)
+    #her magic is based on bubbles --> she uses foam & air bubbles to fight
+    #she shows her parents her magic and they think its a miracle and she enrolls into the academy
+
+
+
+
+
+
+
+#give player limited mana so they can only save certain amount of people
+label battle:
+
+
+
+
+
+
+
 
 
 
