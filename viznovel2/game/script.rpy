@@ -512,6 +512,7 @@ label io_story_1:
 
 
 label faerin_story_1:
+    # i feel like in this story we can jsut see a glimpse of how faerin interacted before her... issues??? 
     "..."
 
     unknown_helio "Faerin, excellent work as always!" #using helio for now feel free to change later just using this as prof varible 
@@ -539,10 +540,120 @@ label faerin_story_1:
 
     "You don't bother to put any effort into making yourself more amiable towards her, not like she would care regardless."
 
-    #more story here dunno where im going with this ngl
+    show the rest of the group
+
+    io "We should hang out! I mean, class is over and we don't have homework-"
+
+    faerin "I'm going home."
+
+    "Io stares at Faerin."
+
+    io "Please Faerin you never come! I know Zaelf would want you there~"
+
+    zaelf "..."
+
+    "He never spoke much, or in general from what you could remember."
+
+    uxie "It's okay, I know Faerin isn't much of an outside person."
+
+    "Faerin looks at you with a slight thankfulness in her eyes."
+
+    "Io huffs angrily."
+
+    io "Oh fine, but next time you are so coming with you hear me?"
+
+    "Faerin nods before waving goodbye and leaving before anyone could reply."
+
+    io "One day I'll get that girl out of her shell, just like I did with Zaelf!"
+
+    "Io pats Zaelf on the shoulder while he stands still and stares."
+
+    azer "Okay let's just get going, (not charlie but idk new name yet) is waiting for us at the front of the school."
+
+    uxie "Oh yeah! I hope his test went well." #oh for charlie or whatever his name is, lets not give him a backstory so its spooky hahaha also i lazy 
+
+    #jump to wherever 
 
 label zaelf_story_1:
     "..."
+
+    uxie "... and then he said that he wouldn't let me! Can you believe it?"
+
+    zaelf "..."
+
+    uxie "I KNOW RIGHT? Ugh and I know he's also kinda right but he doesn't get what this means to me."
+
+    zaelf "..."
+
+    uxie "Yeah that's a good point. I should talk to him."
+
+    "Zaelf nods, as you both walk down the hallway."
+
+    "You stop at a classroom, the plaque outside titled \"Herbology 235\"."
+
+    uxie "I hope professor doesn't make us work with torch ginger again!"
+
+    "Zaelf was always a good listener."
+
+    fade with black 
+    show classroom 
+
+    uxie "Sweet! We get to work with turkey tangle frogfruit!"
+
+    "A small smile appears on Zaelf's face, he wasn't as nerdy as Faerin but he enjoyed herbology."
+
+    "It was one of the rare times where he wasn't seen as..."
+
+    "different."
+
+    professor "Class, I want to continue where we left off..."
+
+    "The professor's voice fades into the background as you continue to talk to Zaelf."
+
+    uxie "Oooo I think Io wants to hang out today? Something about practicing our abilites. Sometimes I think she's more academically motivated than Faerin."
+    #puts like foreshadowing of Io
+
+    "Zaelf nods, you can't tell if he actually wanted to attend, or did so to not have to answer more questions."
+
+    "A part of you always liked to think he just liked listening to everyone talk."
+
+    zaelf "*points towards the flower*"
+
+    uxie "Oh yeah! What did the professor say again?"
+
+    "A smile breaks out on Zaelf's face as he began to do something with his hands."
+
+    "A dark coloured aura surrounded his hands." #yo his stink
+
+    "Before he could apply it onto the plant, a voice from somewhere in the class shouted."
+
+    unknown "I DON'T UNDERSTAND? You teach too fast!"
+
+    professor "Okay okay, calm down. I'll be over in a moment to assist you."
+
+    "You hide a snicker as you start conjuring magic in your hands instead."
+
+    uxie "I got this!"
+
+    "..."
+    show plant being magiced on 
+
+    "BOOM!"
+
+    show you and zaelf cover in soot 
+
+    uxie "Whoops?"
+
+    professor "What in the name of helio is going on here?" #idk using helio for now
+
+    zaelf "..."
+
+    uxie "..."
+
+    professor "*sighs*"
+
+    #jump to wherever 
+
 
 label azer_story_1:
     "..."
@@ -613,7 +724,7 @@ label hexaria_story: #NOT FINISHED
 
 #cut backstories up into parts later
 label io_backstory:
-    "Io grew up in a small neighbourhood and lived a normal childhoom, at least she thought it was normal to her."
+    "Io grew up in a small neighbourhood and lived a normal childhood, at least she thought it was normal to her."
 
     show io dad smile
 
@@ -661,11 +772,57 @@ label io_backstory:
     #her magic is based on bubbles --> she uses foam & air bubbles to fight
     #she shows her parents her magic and they think its a miracle and she enrolls into the academy
 
+    "As time passed, there never came the day where Io got powers."
 
+    "Never the day that she would run to her parents bragging about her newly found magic."
 
+    "But you can't just dangle candy in front of a child and expect them not to chase it?"
 
+    io "It isn't fair."
+    
+    "It was at that time..."
 
+    "Io realized she would never be blessed with magic."
 
+    "So she blessed herself."
+
+    show io gaining artifical powers
+
+    "Artifical magic."
+
+    unknown "There are drawbacks."
+
+    show io like pawbert where he had like that mad look in his eyes 
+
+    io "I know."
+
+    hide io 
+
+    "When she told her parents..."
+
+    "They were so, so, so proud."
+
+    io_mom "Honey it's a miracle! Our little girl is a mage!"
+
+    show io_mom super happy and hugging io 
+
+    # more details here of scene 
+
+    #... 
+
+    "Overtime, the cracks began showing."
+
+    show io attempting magic alone it crackles and fizzes out
+
+    show io frustrated 
+
+    io "You... you can't give up on me now. Not after I worked so hard to make this happen."
+
+    io "What I had to give up in return..."
+
+    "Of course, all magic has a price."
+
+    
 
 #give player limited mana so they can only save certain amount of people
 label battle:
