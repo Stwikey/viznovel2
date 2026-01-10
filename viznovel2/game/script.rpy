@@ -400,6 +400,8 @@ label pacifist:
 
     "To your surprise, it walks through, not being affected by your pressance."
 
+    jump part_4
+
 # when you catch up with the party different depending on if you stayed behind to learn more or rushed to stop them 
 label part_4: 
     unknown_girl3 "Did you hear about the party going to Willowsburrow?" #unknown is just placeholder, too lazy to make ?? characters rn
@@ -495,9 +497,49 @@ label part_5:
 
     hide librarian
 
-    "You manage to quickly take the book and slip out of the library."
+    "You manage to quickly take the book and slip out of the library with the book in hand."
+    
+    menu: 
+        "Open the book.":
+            jump hexaria_story
 
-    #continue 
+label part_6: 
+    you "Hexaria's flower..."
+
+    you "The magic it holds has the possiblity of healing anything."
+
+    you "Could it... somehow heal my memory loss?"
+
+    "You can't afford to get distracted now."
+
+    you "The group from earlier, if I follow them..."
+
+    you "I'll be able to find one."
+
+    "Thinking about it for longer, you remember when you could absorb magic."
+
+    "This could be your key to remembering and maybe escaping this... limbo?"
+
+    "\"Hexaria's flower is abundant on the mountain she is said to have lived. The famed Willowsburrow, known for it's extremely wet and slippery terrain."
+
+    "The terrain is said to be due to the amount of tears Hexaria cried those faithful days.\"" 
+
+    you "Willowsburrow! I have to go there."
+
+    "You hear someone running from behind you."
+
+    charlie "Those idiots! When will they learn their actions have consequences."
+
+    "It was ___ from earlier... except this time he was holding a staff of some sort along with a bag on his back."
+
+    charlie "Willowsburrow? Seriously?"
+
+    "As of by habit, you started jogging beside him."
+
+    charlie "One person wasn't enough, so they're gonna kill everyone else huh?"
+
+    "You continue to follow him through various."
+
 
 #character background info, could probably split these into multiple parts that you find out later
 #(don't have to discover all of their full backstories, player should want to choose who they think the imposter is)
@@ -508,7 +550,11 @@ label io_story_1:
 
     uxie "I'm not sure..."
 
-    uxie "I don't really do outings."
+    uxie "It's supposed to be raining kinda bad that day."
+
+    io "Fine fine party pooper."
+
+    #idk where im going with this rn 
 
 
 label faerin_story_1:
@@ -658,9 +704,32 @@ label zaelf_story_1:
 label azer_story_1:
     "..."
 
+    uxie "Do it! Do it! Do it!"
+
+    azer "I can't!"
+
+    io "Come on~, don't be a scardey cat!"
+
+    azer "I am a scaredy cat now get me down!" 
+
+    show everyone watching azer_at the top of a tree
+
+    "Azer was afraid of heights."
+
+    "Very afraid."
+
+    "Which leads us to wonder how he ended up in this situation."
+
+    fade with black 
+
+    "A few moments ago..."
+
+    #he was pretending to be like super cool and non chalant but got scared so badly he ran up a tree 
+
 label uxie_story_1:
     "..."
 
+#WHOS HELIO? 
 label helio_story_1:
     "..."
 
@@ -677,14 +746,22 @@ label io_story_2:
 
     "Sparks of magic burst unexpectedly from Io's fingers and she winces in pain"
 
-    io "UGH why is it malfunctioning now?!"
+    io "UGH why is it malfunctioning now?!" 
+
+    io "After all I did..."
+
+    show io turning to your direction so like staring_at the screen
+
+    "Io turns to look at you."
+
+    you "!"
 
 
 #possible ending 1 iea: u are hexaria and u get resurrected but you are blinded by rage so the vision comes true & you destroy everything
 
 #hexaria's backstory, fell in love with a mortal who died eventually and did not want to spend immortality with her, hexaria's tears created magical plants known as hexaria's flowers that were abundant in magical energy. 
 #hexaria ended up cursing his bloodline (? maybe?) 
-label hexaria_story: #NOT FINISHED
+label hexaria_story: #finished for you feel free to change
 
     "Hexaria was a loving Goddess who loved to travel to the mortal realm and the mortals loved her."
 
@@ -708,19 +785,92 @@ label hexaria_story: #NOT FINISHED
 
     hexaria "Hey why is your hair turning gray? You look... different"
 
-    huntsman "haha... did it really take you this long to notice?"
+    huntsman "Haha... did it really take you this long to notice?"
 
-    huntsman "as for you, you haven't changed one bit"
+    huntsman "As for you, you haven't changed one bit."
+
+    "Some could say that Hexaria was blissfully unaware. Or maybe some would call her a fool."
+
+    "But her grasp on mortal lives..."
+
+    "was limited."
+
+    huntsman "I'm aging... it's what mortals do."
+
+    hexaria "Is that an illness? I can heal you!"
+
+    huntsman "No, no. None of that."
+
+    huntsman "This is simply the way of life."
+
+    hexaria "The way of life?"
+
+    "Maybe at the time she didn't fully understand that the way of life always involves death."
+
+    "Or maybe she just couldn't accept it."
+
+    show hexaria watching hunstman laying in bed 
+
+    hexaria "I don't understand, I tried healing you but it's not working!"
+
+    huntsman "You cannot heal this, for it is not an illness silly. *coughs*"
+
+    huntsman "It's my time... please don't cry."
+
+    show hexaria crying
+
+    huntsman "You are far too beautiful to be crying."
+
+    hexaria "You said you would stay with me... for the rest of our lives."
+
+    huntsman "I didn't mean to be made a liar. I'm sorry, I truly am my dearest, Hexaria." #HAMILTON????
+
+    "\"The rest of their lives...\""
+
+    "Hexaria's understanding was askew. For the huntsman did spend the rest of his life with her."
+
+    "But she still had infinity to go. An infinity without... him."
+
+    "When he passed... she flew into a great depression."
+
+    show hexaria crying sobbing wailing 
+
+    "She tried to bring him back."
+
+    "Really she did."
+
+    "But you can't heal the dead."
+
+    show hexaria looking_at her hands
+
+    "As time passed she couldn't bear to seperate from the Huntsman."
+
+    "Even if that meant, seeing his remains."
+
+    "Time heals all wounds..."
+
+    "But time only rubbed more salt into them."
+
+    show hexaria w the rotting corpse 
+
+    hexaria "You lied."
+
+    hexaria "You said we would live the rest of our lives together, and now you've left me."
+
+    "Of course she knew what really happened."
+
+    "But believing that he hated her hurt less than accepting the truth."
 
     #hexaria tries to use her magic to keep him as alive as possible but he starts decomposing lollll
     #he tells hexaria he wants to be free and hexaria gets angry cus she thinks he doesnt love her anymore
     #hexaria CRASHES OUT cus HE DIES
 
-    "hexaria fell into a deep sadness and her tears rained down the skies for 32 days"
+    "Hexaria fell into a deep sadness and her tears rained down the skies for 32 days"
 
-    "from the rain a new species of flower was discovered, named as hexaria's flower"
+    "from the rain a new species of flower was discovered, named as Hexaria's flower"
 
-    "from that day on hexaria disappeared and no longer visited the mortal realm"
+    "from that day on Hexaria disappeared and no longer visited the mortal realm."
+    jump part_6
 
 #cut backstories up into parts later
 label io_backstory:
@@ -822,7 +972,21 @@ label io_backstory:
 
     "Of course, all magic has a price."
 
+    "So when Io started experiencing issues..."
+
+    "She saught ways of fixing it."
+
+    show io looking flipping through books seeing the book about hexarias flower 
+
+    "You would never expect such a lovely girl, to go to extreme lengths to make sure no one found out."
+
+    io "I really am sorry, but I can't really be the greatest mage that ever lived... if I'm not a mage."
+
+    show io hovering over someone 
+
+    #jump to wherver 
     
+
 
 #give player limited mana so they can only save certain amount of people
 label battle:
