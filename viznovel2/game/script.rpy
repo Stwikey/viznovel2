@@ -36,8 +36,7 @@ define uxie = Character('Uxie')
 define azer = Character('Azer')
 #stereotypical aloof guy, can get scared for his life which makes him more selfish <-- makes people sus him 
 
-define higeki = Character('Higeki') #CHARLIE REPLACEMENT NAME (???)
-#replacement for charlie name to fit theme more lol lmk if this is ok replacement name cus idrk? 
+define orryx = Character('Orryx') #charlie REPLACEMENT NAME
 #knows what happened and refuses to let go of the past while all the others did, depressed guy 
 
 #lowkey want to make both sides of the story morally gray so the player has a harder time to choose which side to help
@@ -57,6 +56,8 @@ define huntsman = Character('Huntsman')
 define io_mom = Character('Io\'s Mom')
 define io_dad = Character('Io\'s Dad')
 
+#story paths 
+default stay_at_cemetary = False 
 
 
 #vision of apocalypse/introduction
@@ -211,9 +212,9 @@ label part_2:
 
     "You get this cold feeling, as fragmented memories flash through your head."
 
-    "\"CHARLIE STOP IT, YOU'LL DIE!\"" # put this in quotes mysteryyyy
+    "\"LAZAR STOP IT, YOU'LL DIE!\"" # put this in quotes mysteryyyy
 
-    you "Who the hell is Charlie?" 
+    you "Who the hell is Lazar?" 
     
     "You are brought back to the present, but there are still many missing memories." 
 
@@ -264,92 +265,92 @@ label oblivious:
     jump part_3
 
 label part_3: 
-    # basically learn a bit about who charlie is in this universe 
+    # basically learn a bit about who Lazar is in this universe 
     "You continue to wander around, walking through the street."
 
-    you "Who is Charlie? And what was he doing..." #change his name 
+    you "Who is Lazar? And what was he doing..." 
     
     you "Something is going to destroy this world, I know I'm not a mortal like those kids from earlier." 
 
     "Suddenly as you pass by a cafe, you catch a fragment of a conversation."
 
     show unknown_girl3 angry
-    unknown_girl3 "Charlie I told you, you need to give it up. I'm tired of hearing about your stupid conspiricy theories."
+    unknown_girl3 "Orryx I told you, you need to give it up. I'm tired of hearing about your stupid conspiricy theories."
 
-    show charlie angry
-    charlie "And I'm telling you, it's not a conspiracy! The world is ending and I don't know how to stop it!"
+    show Orryx angry
+    orryx "And I'm telling you, it's not a conspiracy! The world is ending and I don't know how to stop it!"
 
     unknown_girl3 "Can you just drop it. Mom and Dad are worried, you stopped returning your calls, you stopped going out with me for drinks, it's like I don't even know you anymore."
 
-    show charlie aloof 
-    charlie "I'll be fine."
+    show Orryx aloof 
+    orryx "I'll be fine."
 
     unknown_girl3 "No you aren't! You've been like this ever since-"
 
-    show charlie angry
-    charlie "Don't drag her into this."
+    show Orryx angry
+    orryx "Don't drag her into this."
 
     unknown_girl3 "You have to let go eventually."
 
-    show charlie calmer
-    charlie "No. I don't. It was nice meeting with you sis, I'm going to leave now." 
+    show Orryx calmer
+    orryx "No. I don't. It was nice meeting with you sis, I'm going to leave now." 
 
-    you "Charlie..." 
+    you "Orryx..." 
 
     you "I have to follow him."
 
-    "You follow Charlie out of the cafe as he makes his way through the city."
+    "You follow Orryx out of the cafe as he makes his way through the city."
 
     "You can't help but instinctively walk beside him, a part of you finds it familliar."
 
-    charlie "What am I even doing..."
+    orryx "What am I even doing..."
 
-    "Charlie continues to mumble to himself as he continues to walk down the street." 
+    "Orryx continues to mumble to himself as he continues to walk down the street." 
 
-    charlie "I mean, you heard what she said, and I know maybe I am too deep into this."
+    orryx "I mean, you heard what she said, and I know maybe I am too deep into this."
 
-    charlie "But how couldn't I be, especially when..."
+    orryx "But how couldn't I be, especially when..."
 
-    show charlie turned towards you
+    show Orryx turned towards you
 
     "You feel chills run down your body as he turned to look in your direction. You stop walking as he stares right into your eyes."
 
     "He can see you?!"
 
-    show charlie laughing
+    show Orryx laughing
 
-    charlie "Who am I kidding, it's not like you're listening. But I like to imagine you are."
+    orryx "Who am I kidding, it's not like you're listening. But I like to imagine you are."
 
     "He laughs to himself, there's something in you that can't help but chuckle at the sight."
 
-    "Charlie makes his way to a small cemetary on the outter parts of the city." 
+    "Orryx makes his way to a small cemetary on the outter parts of the city." 
 
-    charlie "I'm sorry I haven't been visiting as often as I used to."
+    orryx "I'm sorry I haven't been visiting as often as I used to."
 
-    charlie "But I hope you understand, I'm trying to continue where we left off."
+    orryx "But I hope you understand, I'm trying to continue where we left off."
 
-    charlie "I hate them."
+    orryx "I hate them."
 
-    charlie "I know you said not to, but I hate them."
+    orryx "I know you said not to, but I hate them."
 
-    charlie "I hate the way they get to continue walking around, even after all they did." #this is first implication that the group was the cause of your death
+    orryx "I hate the way they get to continue walking around, even after all they did." #this is first implication that the group was the cause of your death
 
-    charlie "And I hate you."
+    orryx "And I hate you."
 
-    charlie "I hate that you left me alone, to deal with all of this."
+    orryx "I hate that you left me alone, to deal with all of this."
 
-    you "Charlie... I'm sorry, I don't remember what happened"
+    you "Orryx... I'm sorry, I don't remember what happened"
 
     you "but I promise I'll figure it out."
 
-    charlie "I heard they are going to Willowsburrow. Idiots." #the spooky location from intro scene 
+    orryx "I heard they are going to Willowsburrow. Idiots." #the spooky location from intro scene 
 
-    charlie "They are going to get themselves killed. As if one wasn't enough might as well make it the rest of the party." #more implication 
+    orryx "They are going to get themselves killed. As if one wasn't enough might as well make it the rest of the party." #more implication 
 
     you "The group from earlier... they were going to Willowsburrow."
 
     menu: 
-        "Stay by Charlie's side.":
+        "Stay by Orryx's side.":
             jump stay
         
         "Try to track down the adventuring group from earlier.":
@@ -357,9 +358,33 @@ label part_3:
 
 # when staying we learn about how the flower contributes to their goal and the mission they are on but we will be late or possibly miss the opening to try to intervene 
 label stay:
+    $ stay_at_cemetary = True
     you "I can't leave him now."
 
     you "He might know more information about the world ending. And if what he's saying is true I need to prevent it from happening."
+
+    orryx "You always could talk some sense into them."
+
+    orryx "I remember when you used to talk Zaelf's ear off."
+
+    orryx "I know he never said anything about it but we both know he liked it."
+
+    jump zaelf_story_1
+
+label stay_2: 
+    you "..."
+
+    you "Uxie..."
+
+    show Orryx looking down to his watch
+
+    orryx "Shoot, I'm not gonna get there in time to stop them!"
+
+    show Orryx running away 
+
+    you "I should search for them too."
+
+    jump track
 
 #when leaving we will find the group but have no idea what their goals or plans are 
 label track: 
@@ -410,7 +435,7 @@ label part_4:
 
     unknown "I'm surpirsed Azer didn't fight it harder, we all know he's a scardy cat when it comes to danger."
 
-    unknown "As if one tradgey wasn't enough for them."
+    unknown "As if one tragdey wasn't enough for them."
 
     "The student scoffs, he seemed younger than the party from earlier."
 
@@ -450,7 +475,17 @@ label detective:
 
     you "From what I've gathered, it seems like I can interact with inanimate objects and plants." #conclusion i drew, feel free to change
 
-    jump explore
+    if stay_at_cemetary == True:
+        you "Uxie must have been the student that died."
+
+        you "And whoever Orryx is must have been in the party with her."
+
+        you "As well as the others from earlier."
+
+        jump explore
+
+    else:
+        jump explore
 
 label explore: 
     "The signs posted all over the city prove useful as they eventually lead you into the direction of a library."
@@ -528,18 +563,74 @@ label part_6:
 
     "You hear someone running from behind you."
 
-    charlie "Those idiots! When will they learn their actions have consequences."
+    orryx "Those idiots! When will they learn their actions have consequences."
 
-    "It was ___ from earlier... except this time he was holding a staff of some sort along with a bag on his back."
+    "It was Orryx from earlier... except this time he was holding a staff of some sort along with a bag on his back."
 
-    charlie "Willowsburrow? Seriously?"
+    orryx "Willowsburrow? Seriously?"
 
     "As of by habit, you started jogging beside him."
 
-    charlie "One person wasn't enough, so they're gonna kill everyone else huh?"
+    orryx "One person wasn't enough, so they're gonna kill everyone else huh?"
 
-    "You continue to follow him through various."
+    "You continue to follow him through various terrain, even continuing through the night."
 
+    "By the end of the journey, Orryx looked tired. Unlike you, the lack of sleep was not as kind."
+
+    "His poor posture and growing eye bags only further supported this."
+
+    orryx "This is stupid."
+
+    orryx "Uxie... why did you have to leave..."
+
+    if stay_at_cemetary == False: 
+        you "Uxie?"
+
+        you "It must be the person who died."
+
+    show orryx tearing up 
+
+    "You notice his steps begin to falter as he begins to slow down."
+
+    orryx "I don't want to continue anymore. No matter what I do I can't change anything."
+
+    orryx "Who am I kidding... they'll probably be done the mission."
+
+    orryx "If you were here you'd probably be scolding me for not believing in our friends." 
+
+    you "You feel a vision come to you." #FIX THIS TRANSISTION LOL SO BAD
+
+    jump uxie_story_1
+
+label part_7: 
+    "Suddenly you were back."
+
+    "Except Orryx laid on the ground, unmoving."
+
+    "His chest was still rising and falling, but he looked ill."
+
+    menu:
+        "Try to heal him."
+    
+    "You hold out both your hands as a yellow glow emitts from them."
+
+    "You see as the bags under his eyes seem to fade and his breathing returns to normal." 
+    
+    orryx "..."
+
+    orryx "*groans*, what the heck?"
+
+    "He springs up immediately and begins looking around frantically."
+
+    orryx "UXIE? WHERE? WHAT?"
+
+    orryx "I must've been dreaming."
+
+    "He holds his head with his hands before picking up his backpack."
+
+    orryx "Man I guess I really needed that rest."
+
+    #continue 
 
 #character background info, could probably split these into multiple parts that you find out later
 #(don't have to discover all of their full backstories, player should want to choose who they think the imposter is)
@@ -614,9 +705,9 @@ label faerin_story_1:
 
     "Io pats Zaelf on the shoulder while he stands still and stares."
 
-    azer "Okay let's just get going, (not charlie but idk new name yet) is waiting for us at the front of the school."
+    azer "Okay let's just get going, Orryx is waiting for us at the front of the school."
 
-    uxie "Oh yeah! I hope his test went well." #oh for charlie or whatever his name is, lets not give him a backstory so its spooky hahaha also i lazy 
+    uxie "Oh yeah! I hope his test went well." #oh for Orryx or whatever his name is, lets not give him a backstory so its spooky hahaha also i lazy 
 
     #jump to wherever 
 
@@ -698,8 +789,10 @@ label zaelf_story_1:
 
     professor "*sighs*"
 
-    #jump to wherever 
-
+    if stay_at_cemetary == True:
+        jump stay_2
+    else:
+        #j
 
 label azer_story_1:
     "..."
@@ -728,6 +821,54 @@ label azer_story_1:
 
 label uxie_story_1:
     "..."
+
+    "You see an open feild, a group of children are playing in the grass chasing each other and shouting."
+
+    io "Just you wait! I'm gonna be the greatest mage in the world!"
+
+    azer "Io, you haven't even got your magic yet, meanwhile the great and powerful Azer is already one step ahead!"
+
+    show child_io puffing her cheeks out angry 
+
+    uxie "Stop trying to pick a fight Azer, why can't you be more like Zaelf."
+
+    show uxie pointing towards zaelf 
+
+    zaelf "..."
+
+    faerin "Words of wisdom that guy."
+
+    uxie "Exactly!"
+
+    show orryx trying to jumpscare uxie 
+
+    orryx "BOO!"
+
+    uxie "!"
+
+    orryx "Ehe, just me!"
+
+    uxie "Not funny!"
+
+    show everyone laughing cus it so funny
+
+    "Looking away from the children, a familliar flower comes into view."
+
+    show flower 
+
+    "Tucked away in the grass, there it was."
+
+    "Hexaria's flower..."
+
+    you "This is what they are looking for..."
+
+    "You feel a pull towards the flower."
+
+# then like something and you can absorb magic to give orryx more energy or like so he feels ur aura (stink) idk 
+    menu:
+        "Try to absorb magic.":
+            jump part_7
+
 
 #WHOS HELIO? 
 label helio_story_1:
