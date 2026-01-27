@@ -51,7 +51,7 @@ define unknown_girl3 = Character('???')
 define unknown = Character('???')
 
 define hexaria = Character('Hexaria')
-define huntsman = Character('Huntsman')
+define huntsman = Character('Renrir')
 
 define io_mom = Character('Io\'s Mom')
 define io_dad = Character('Io\'s Dad')
@@ -87,6 +87,47 @@ label start:
     "You find yourself laying on a grassy field. Plants and flowers rustle in the wind."
 
     "You can feel their magic pulsating through the air, as they breathe."
+
+#you wake up to your pigeon (or other) carrier squawking in your face, it seems like you got mail
+label intro: 
+    "You wake up with a hard smack to your face."
+
+    "A bird lets out a loud SQUACK and flaps it's wings urgently, hitting your face."
+
+    you "Ugh, what the heck Helio?!"
+
+    Helio "CAWWWW"
+
+    "Helio drops a pile of scrolls that it was carrying in it's claws on your face and lands gently on your stomach."
+
+    menu: 
+        "Look at the mail":
+            jump look_at_the_mail
+        "Go back to sleep":
+            jump go_back_to_sleep
+
+# You wake up and start reading the mail
+label look_at_the_mail:
+    you "ugh okay okay."
+
+    "You sit up tiredly, rubbing your eyes, knowing that Helio will start pecking you if you don't wake up."
+
+    "Helio tilts his head, looking at you expectantly."
+
+    menu: 
+        "Read the letter"
+
+label go_back_to_sleep:
+    "You cover your head with your blanket, blocking your eyes from the bright sunlight being cast in your room"
+
+
+
+
+
+
+
+
+
 #choice to recall memories
 menu: 
     "Try to remember what happened.":
@@ -1131,10 +1172,6 @@ label io_backstory:
 
 #give player limited mana so they can only save certain amount of people
 label battle:
-
-
-
-
 
 
 
