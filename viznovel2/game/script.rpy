@@ -59,8 +59,10 @@ define io_dad = Character('Io\'s Dad')
 #story paths 
 default stay_at_cemetary = False 
 
+define npc = Character('npc')
 
-#vision of apocalypse/introduction
+
+#vision of apocalypse/introsduction
 label start:
     #cutscene of vision
 
@@ -110,24 +112,201 @@ label intro:
 label look_at_the_mail:
     you "ugh okay okay."
 
-    "You sit up tiredly, rubbing your eyes, knowing that Helio will start pecking you if you don't wake up."
+    "You sit up tiredly, rubbing your eyes, knowing that Helio will start pecking you again if you don't wake up."
 
     "Helio tilts his head, looking at you expectantly."
 
     menu: 
-        "Read the letter"
+        "Read the letter":
+            jump read
 
+# You try to go back to sleep but Helio prevents you from doing so, so you get up anyways
 label go_back_to_sleep:
-    "You cover your head with your blanket, blocking your eyes from the bright sunlight being cast in your room"
+    "You cover your head with your blanket, blocking your eyes from the bright sunlight being cast in your room."
+
+    Helio "SQUWAKKKKKKKKKKKK"
+
+    "Helio starts pecking you aggressively, and you feel his beak through the blanket."
+
+    jump look_at_the_mail
+
+# You read the letter, surprised to find out the magic academy you applied to accepted you after a few months of rejecting you
+label read:
+    "You sign, slowly opening up the scroll, reading,"
+
+    "\"Dear __, Congratulations! Fortunately a spot has recently opened up for you to attend the magic academy! Hope to see you there!\"" #fix 
+
+    "\" Sincerely, Headmaster Dean."
+
+    menu:
+        "What?":
+            jump what
+
+# You are shocked because of the letter
+label what:
+    you "huh?"
+
+    "You vividly recall memories of being rejected months ago."
+
+    "After hopefully applying to the academy you waited excitedly for days to see if you got in."
+
+    "However, when you finally received the mail you got rejected."
+
+    menu:
+        "It's a prank":
+            jump prank
+        
+        "Jump for joy":
+            jump joy
+
+# You think the letter is definetly a prank but Helio says otherwise
+label prank:
+    you "This has got to be a prank"
+
+    "You lay back down ready to go back to sleep."
+
+    Helio "SQUWAKKKK SQUWAKKKKKKKK"
+
+    you "what? the Headmaster personally gave you the letter?"
+
+    you "I don't believe you"
+
+    Helio "SQUWAKKK"
+
+    you "okay fine fine, I'll go I'll go"
+
+    Helio "chirp"
+
+    menu:
+        "Set off for the academy":
+            jump set_off
+
+# You jump for joy, excited to finally attend your dream academy
+label joy:
+    you "yay yay! I knew they made a mistake when they didn't choose me!"
+
+    "You hug Helio excitedly"
+
+    Helio "squwakkkkkk...."
+
+    menu:
+        "Set off for the academy":
+            jump set_off
+
+# You walk to the academy
+label set_off:
+    "You quickly get dressed and pack your bags, eagerly setting off to the academy."
+
+    "After a long walk and many rides, you finally arrive at the grand entrance of the academy."
+
+    menu:
+        "Open the doors":
+            jump open
+
+label open: 
+    "You take a deep breath, and push open the large doors that reveal a grand interior"
+
+    npc "?"
+
+    npc "Oh! You must be _____! The new student, correct?"
+
+    menu:
+        "Yep thats me!":
+            label yep
+
+label yep:
+    npc "Perfect! Here's your schedule, a map of the school, and let me take you to meet your dorm mates!"
+
+    "The professor hands you two large scrolls and you take them carefully."
+
+    "In a quick glance you see the large layout of the school, as well as classses on your schedule such as potion making and spell casting"
+
+    npc "Let me know when you're ready to leave!"
+
+    menu:
+        "I'm ready!":
+            jump ready
+        "Give me a moment":
+            jump moment
 
 
+label moment:
+    "You take in the interior of the school, large, tall pillars reach towards the sky and with large emblems and intricate designs flowing through the ceiling."
+    
+    "It's your dream school, and you are finally attending it."
 
+    menu:
+        "I'm ready now":
+            jump ready
 
+label ready:
+    npc "Alright! follow me!"
 
+    "The guide leads you through long hallways and delicate staircases"
 
+    "After what feels like forever, the guide finally stops at a large, wooden door"
 
+    npc "Here it is! They might be on edge since you're new here after months but I'm sure you'll all be friendly in no time!"
 
+    npc "I'll leave you be now, you can come to me if you have anymore questions!"
 
+    "The guide walks away, their footsteps getting quieter as they walk away."
+
+    menu: 
+        "Knock on the door":
+            jump knock
+
+label knock:
+    "You knock gently on the door, hearing subtle whispers from behind it"
+
+    "The door slowly creaks open, revealing three faces"
+
+    faerin_unknown "..."
+
+    you "yikes, they sure are on edge"
+
+    "A blonde haired girl pops up from behind the girl, patting her on the back"
+
+    io_unknown "ahaha faerin don't be like that!"
+
+    "She smiles at you sheepishly"
+
+    io_unknown "you must be our new dormmate right? My name's Io! and this is Faerin"
+
+    faerin_unknown "..."
+
+    io_unknown "aaaand that's Zaelf over there!"
+
+    zaelf_unknown "..."
+
+    "Zaelf gives you a small nod."
+
+    io_unknown "Yeah Zaelf is actually mute, but Faerin's being mean today apparently."
+
+    menu:
+        "Introduce yourself":
+            jump introduce_yourself
+
+label introduce_yourself:
+    you "My name's _____, nice to meet you all..."
+
+    "an awkward silence passes."
+
+    io "aaaaaanyways! It's almost lunch time so let's go to the cafeteria?"
+
+    "Zaelf moves forward and looks back at you, and you follow nervously, things were not going as smoothly as you had hoped"
+
+    "As you walk further away from Io and Faerin who stayed back, you hear fragments of their under the breath conversation"
+
+    io "I told you to be nice to her! she didn't do anything wrong!"
+
+    faerin "...I know..."
+
+    jump cafeteria
+
+label:
+    "You and Zaelf arrive to the cafeteria first, the delicious smell of freshly made food makes you hungry"
+    
 #choice to recall memories
 menu: 
     "Try to remember what happened.":
@@ -1175,7 +1354,11 @@ label battle:
 
 
 
+#good ending
+label win:
 
+#bad ending
+label lose:
 
 
 
