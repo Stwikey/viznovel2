@@ -60,6 +60,7 @@ define io_dad = Character('Io\'s Dad')
 default stay_at_cemetary = False 
 
 define npc = Character('npc')
+default figgly = Character('Professor Figgly')
 
 
 #vision of apocalypse/introsduction
@@ -229,7 +230,6 @@ label yep:
         "Give me a moment":
             jump moment
 
-
 label moment:
     "You take in the interior of the school, large, tall pillars reach towards the sky and with large emblems and intricate designs flowing through the ceiling."
     
@@ -304,9 +304,103 @@ label introduce_yourself:
 
     jump cafeteria
 
-label:
-    "You and Zaelf arrive to the cafeteria first, the delicious smell of freshly made food makes you hungry"
+label cafeteria:
+    "You and Zaelf arrive to the cafeteria first and Faerin and Io arrive shortly after, the delicious smell of freshly made food makes you hungry"
+
+    "Zaelf points in the direction of a long line and you and the group quickly grab food, sitting down at one of the empty tables."
+
+    "Still feeling the tension in the air, you quickly gobble down the food, without making eye contact"
+
+    io "after lunch, well have class"
+
+    io "since you joined late you're probably behind but we'll help you catch up!"
+
+    "she smiles at you brightly"
+
+    io "what class do you have now?"
+
+    you "umm let me check."
+
+    "You quickly open up your now crumpled time table"
+
+    you "spell casting"
+
+    "Io's smile quickly drops"
+
+    io "oh you share the same class as Faerin!"
+
+    "She shoots Faerin a glare"
+
+    io "she'll help you through the class, right?"
+
+    "Faerin nods slowly, without looking up"
+
+    "You sit tightly at your seat, watching the time slowly tick by"
     
+    jump first_class
+
+label first_class:
+    "The bell rings, signaling the end of the lunch period."
+
+    "Students all start rushing out the cafeteria."
+
+    io "_____, me and Zaelf have potion making class now so we'll see you guys back at the dorm!"
+
+    menu:
+        "See you!":
+            jump see_you
+
+label see_you:
+    "You follow Faerin nervously as she takes off without a word."
+
+    menu:
+        "Try to make small talk":
+            jump small_talk
+        "Stay silent":
+            jump silent
+
+label small_talk:
+    you "I'm going to be in the same dorm as these people for the rest of this school year, might as well try to make friends"
+
+    you "Faerin-"
+
+    faerin "We're here."
+
+    "Faerin gestures towards a door with a plaque that reads \"Spell Casting 101\""
+    
+    jump spell_casting
+
+label silent:
+    "You stay silent, ignoring the awkward silence."
+
+    jump spell_casting
+
+# You learn a new spell in this class!, as well as possibly making progress with your friendship with faerin
+label spell_casting:
+    "You and Faerin find an empty bench to sit on."
+
+    "Suddenly, a booming voice echos across the room."
+
+    figgly "HELLO HELLO!"
+
+    figgly "Once again, I am your Spell Casting professor, Professor Figgly!"
+
+    figgly "Today, we'll be learning..."
+
+    figgly "...a new spell!"
+
+    figgle "I've decided on four basic level spells that you can choose from, after that split up into the groups that want to learn the same spell as you."
+
+    menu:
+        "I want to learn the PLACEHOLDER spell":
+            jump learning
+
+label learning:
+
+#you receive your first assignment as a squad 
+
+# you 
+
 #choice to recall memories
 menu: 
     "Try to remember what happened.":
@@ -1089,17 +1183,10 @@ label uxie_story_1:
         "Try to absorb magic.":
             jump part_7
 
-
-#WHOS HELIO? 
-label helio_story_1:
-    "..."
-
 #the group comes back,, too lazy to write the stuff that happens before lol
 label arrival:
-
-
-
 #io disappears 
+
 label io_story_2:
     "You rush after Io as she disppears into the forest, leaving the others behind."
 
@@ -1116,7 +1203,6 @@ label io_story_2:
     "Io turns to look at you."
 
     you "!"
-
 
 #possible ending 1 iea: u are hexaria and u get resurrected but you are blinded by rage so the vision comes true & you destroy everything
 
@@ -1353,12 +1439,12 @@ label io_backstory:
 label battle:
 
 
-
+return
 #good ending
-label win:
+#label win:
 
 #bad ending
-label lose:
+#label lose:
 
 
 
