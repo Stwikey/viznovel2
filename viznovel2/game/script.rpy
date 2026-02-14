@@ -477,12 +477,6 @@ label learning:
 
     jump assignment_mission 
 
-
-##its supposed to go learn spell (keep of what track spell u learn) --> get first mission to find the flower --> go to get supplies --> someone from evil faction tries to smuffle u stuff --> 
-#if u say yes u get a new spell if u say no faerin gets affected -->big boss battle that almost kills ur friends --> if u choose to use the new (artifical) spell (big damage) u get affected, 
-#if not ur friends just get very ingjured or one of them can die idc --> if u get affected io helps u and u get brought to the dark side and u dont then u dont uh
-# also the reason why faerin dont like u in the beginning is cus uxie went missing and they replaced her with u so quick so faerin dont like u + 
-# the school but io is ok with u cus she knows uxie is alive just in the evil faction and lowkey zaelf is just chillin cus hes nonchalant idk bro
 label assignment_mission: 
     faerin "We need to find Hexaria's flower."
 
@@ -569,6 +563,226 @@ label get_mugged:
     "As you wait outside, two muscular men approach behind you."
 
     "???" "Hey there..."
+
+    "You turn around and see them."
+
+    "They have masks over their faces and their hands held up, a mysterious magic surging from them."
+
+    "Something... dark."
+
+    "???" "Heard you were students getting your hands on Hexaria's flower."
+
+    "???" "Me and my buddy here, would really apperciate that flower."
+
+    menu:
+        "Sorry, I need it for an assignment!":
+            you "Sorry, I need it for an assignment."
+
+        "Get your own flower you nasty, ugly, fat, not even that buff, super weak prolly, scrawny little rats.":
+            you "I'd advise you get your own. Sorry."
+
+    "???" "We aren't really taking no for an answer."
+
+    "They start heading over to a spot where they can attack Faerin when she exits."
+
+    menu: 
+        "Allow them to take the flower from Faerin.":
+            jump allow_take
+
+        "Defend Faerin.":
+            jump dont_take 
+
+label allow_take: 
+    "You stand there frozen."
+
+    faerin "[name] I am done with-"
+
+    "Before she can finish one of the men tackle her to the ground."
+
+    "You watch as she struggles before behind hit by some type of dark magic spell."
+
+    "She goes limp under them as they prepare to take the flower."
+
+    menu:
+        "Attempt to stop them.":
+            you "Stop it!"
+
+            "You run at the man currently trying to grab the flower out of Faerin's hand."
+
+        "Your feet start moving, you raise your hands up."
+
+    menu: 
+        "Cast the light spell.":
+            "You decide to cast the light spell."
+        
+        "Push them over.":
+            "The push does little to no effect except turn their attention onto you."
+
+            "You decide to cast the light spell."
+
+    "Raising your hands up, you see the flower that fell to the floor begin to glow."
+
+    "Since this is the first time casting this spell, you feel yourself begin to shake."
+
+    "The flower glows brighter, leading you to release an unseen of amount of power."
+
+    "???" "What the?"
+
+    "???" "I thought she was dead?"
+
+    "They get blasted away."
+
+    "What is left, is simply dust in where they once stood."
+
+    faerin "...!?"
+
+    "You see Faerin begin to stir."
+
+    faerin "Uxie?"
+
+    you "Um... no just me."
+
+    faerin "..."
+
+    "There's something... off about Faerin now."
+
+    "Her eyes have changed from the light blue they once were to a dark red."
+
+    faerin "Thank you for saving me."
+
+    "She picks up the now wilted flower, before looking back over at the field."
+
+    faerin "Seems this one is useless now."
+
+    faerin "We will have to obtain another permssion slip from the professor."
+
+    faerin "Correction, you will."
+
+    faerin "I no longer have interest in learning this spell."
+
+    you "???"
+
+    "You drop the discussion. Not wanting to press further."
+
+    jump return_to_school
+
+label return_to_school:
+    figgly "Ah what a shame, I will certainly write you another."
+
+    "He turns to you."
+
+    figgly "I am impressed by your display of magic you haven't practiced yet."
+
+    figgly "Where did you learn it?"
+
+    menu:
+        "I'm not too sure, sorry.":
+            figgly "Aw a shame. Reminds me of a past student we had."
+    
+    "There's a sad look on his face."
+
+    "You glance at Faerin and she seemed to have flinched at him mentioning a past student."
+
+    faerin "Professor, if I could interupt."
+
+    figgly "Please go ahead."
+
+    faerin "I would like to switch to learning the dark casting spell instead of the light one."
+
+    figgly "Oh?"
+
+    figgly "How unusual. Well, since you are a star student gladly."
+
+    figgly "[name], I trust you will be able to complete this on your own?"
+
+    you "Yeah, no problem."
+
+    "Faerin looks at you, not saying anything."
+
+    faerin "Where did you say you were from?"
+
+    you "Oh..."
+
+    menu: 
+        "Try to recall your memories.":
+            "You try hard to think."
+
+    faerin "You look constipated are you okay?"
+
+    you "Oh uh, yeah sorry just trying to remember."
+
+    figgly "I will leave you to your own devices, [name], please find another partner to continue the assignment or find an already existing pair to join."
+
+    figgly "Faerin, I will put in your transfer. I wish you the best of luck."
+
+    "You part ways with Faerin."
+
+    "Congrats you have successfully learned the light spell!"
+
+    jump continue_school 
+
+label continue_school:
+    "You head back to your door to be greeted by Io and Zaelf."
+
+    io "How was class?"
+
+    menu: 
+        "Tell her what happened.":
+            "You summarize what happened today."
+
+            io "Yikes, you must've just been unlucky. Thankfully no one got hurt right Z?"
+
+            zaelf "..."
+
+            "He does a light nod."
+
+            you "Keke, yeah."
+
+        "Tell her everything including the weirdness of Faerin.":
+
+            "You summarize everthing that happened."
+
+            you "Also..."
+
+            io "Mm?"
+            
+            you "Faerin started acting... strange."
+
+            you "She got hit with some dark spell and mentioned someone named Uxie?"
+
+            io "Oh."
+
+            io "i wouldn't worry about it."
+
+            io "Faerin's been having a hard time ever since... yeah."
+
+            io "It's nothing personal, just how things ended up."
+
+            zaelf "..."
+
+            "Zaelf nods, as if to reassure you."
+
+    
+    io "Well we said we would meet everyone tomorrow for lunch, so get a good nights rest."
+
+    io "Don't let the bed bugs bite!"
+
+    "Io makes a silly face at you before heading off to her room."
+
+    "Zaelf waves goodnight before heading off to his room."
+
+    jump lunch_meeting
+
+label lunch_meeting:
+    "You wake up and head out with Io and Zaelf."
+
+    ""
+
+
+#big boss battle that almost kills ur friends --> if u choose to use the new (artifical) spell (big damage) u get affected, 
+#if not ur friends just get very ingjured or one of them can die idc --> if u get affected io helps u and u get brought to the dark side and u dont then u dont uh
+# also the reason why faerin dont like u in the beginning is cus uxie went missing and they replaced her with u so quick so faerin dont like u + 
+# the school but io is ok with u cus she knows uxie is alive just in the evil faction and lowkey zaelf is just chillin cus hes nonchalant idk bro
 '''
 BREAK BREAK BREAK BREAK inc 
 '''
