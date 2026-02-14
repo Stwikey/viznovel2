@@ -776,7 +776,178 @@ label continue_school:
 label lunch_meeting:
     "You wake up and head out with Io and Zaelf."
 
-    ""
+    io "Ah... a nice day to be out."
+
+    "You see two people running to apprach."
+
+    "???" "IO! ZAELF!"
+
+    io "Orryx! Azer!"
+
+    orryx "Oh who's this?"
+
+    you "Hi my name is [name]!"
+
+    azer "My name's Azer and this is Orryx!"
+
+    azer "Hey where's Faerin?"
+
+    io "She should be here soon, maybe she's just running late."
+
+    "You hear hurried footsteps."
+
+    faerin "Sorry, I got distracted with something."
+
+    "Faerin shoots you a glare. She seems to be hiding something."
+
+    you "???"
+
+    faerin "We should go."
+
+    io "Gotcha! Let's goooooo~"
+
+    "The group continues to walk to the lunch spot."
+
+    "As you walk you find yourself talking to Azer and Orryx, getting to know them better."
+
+    orryx "And this one, Uxi- I mean, our friend gave me this charm."
+
+    "He points towards the various charms on his bag."
+
+    azer "Yeah, those were the days."
+
+    "They both seem to have this look of sadness on their face."
+
+    menu: 
+        "Ask about who Uxie is.":
+            you "Um, if you don't mind, who is Uxie?"
+
+            azer "..."
+
+            orryx "..."
+
+            "Faerin turns her head to look at you."
+
+            faerin "She's our friend that moved."
+
+            "Faerin turns back around and continues walking next to Zaelf and Io."
+
+    azer "... yeah, she moved."
+
+    orryx "We should visit her soon though, I bet she's getting pretty lonely."
+
+    azer "Yeah we could after lunch? Maybe [name] can meet her!"
+
+    menu:
+        "I'd love to meet her.":
+            io "Look the resturant's there!"
+            jump lunch_eating 
+
+label lunch_eating: 
+    "\"It's supernatural\" was the name of the resturant you were at."
+
+    "It sure did live up to it's name as various species were seen eating at the tables."
+
+    you "Is that a dragon?"
+
+    "You point towards the dragon species eating steaks."
+
+    io "Yep! Everyone is welcome here."
+
+    you "Ooo and are those elves?"
+
+    azer "A bunch of different species like to gather here, it's kind of a safe space."
+
+    orryx "Plus if you even try starting a fight, the body guards will kick you out."
+
+    "He points towards two cloaked figures, you can't tell what species they are but you can tell by their sheer size that they aren't afraid of conflict."
+
+    faerin "Please stop pointing at the other customers and sit down already."
+
+    "You all sit down at the table."
+
+    faerin "Hello could I get the toasted eels?"
+
+    io "!?"
+
+    "Server" "Haven't heard of that order in a while."
+
+    io "Haha, yeah. We are planning on visting her today."
+
+    "Server" "Is that so? Send her my regards, I'll cover your meal as well. On the house."
+
+    azer "No no we couldn't possibly."
+
+    "Server" "I insist."
+
+    orryx "Thank you."
+
+    "Everyone else says their order and it is now your turn."
+
+    menu:
+        "Order a sandwich with mysterious ingredients":
+            you "I'd like the dragonborne sandwhich."
+
+            "Server" "Interesting choice."
+
+        "Order noodles made with Hexaria petals.":
+            you "I'd like the noodles with Hexaria petals."
+
+            "Server" "Good choice."
+
+        "Order a mystery item.":
+            you "Could I just have something random?"
+
+            io "???"
+
+            io "She's so similar to-"
+
+            "Server" "Oh? Haha if I hadn't known any better I'd think you were Ux-"
+
+            faerin "That will be all."
+    
+    orryx "Well now that foods settled, [name] you should tell us about yourself!"
+
+    menu: 
+        "Tell them what you remember":
+            you "Well, I woke up in a field of grass."
+
+            you "And now I'm here."
+
+    
+    io "???"
+
+    io "Parents? Past friends? Anything else?"
+
+    you "Nope."
+
+    orryx "Haha, she's as secretative as Faerin."
+
+    faerin "..."
+
+    "After conversing more you learn that they have all been attending the school for a while and met during orientation."
+
+    you "Yeah I vividly remember being rejected?"
+
+    io "Why on earth would they reject you?"
+
+    you "Uh... look at me I'm..."
+
+    menu:
+        "Underqualified.":
+            you "I think I was just underqualified."
+
+            io "But you did so good casting the light spell for the first time!"
+
+            you "Yeah I guess."
+
+        "Overqualified.":
+            you "I think I was just overqualified."
+
+        "A useless rat who doesn't do much so I'm not sure why they let me in to begin with.":
+            you "I'm just a useless rat who doesn't do much so I'm not sure why they let me in to begin with."
+
+
 
 
 #big boss battle that almost kills ur friends --> if u choose to use the new (artifical) spell (big damage) u get affected, 
