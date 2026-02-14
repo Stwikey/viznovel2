@@ -18,6 +18,7 @@ Historical, rural, magic academy
 #defining characters
 default mana = 0
 define you = Character('You', color="#ffffff")
+define name = Character('[name]')
 
 define faerin = Character('Faerin')
 #emo, introverted, deadpan, textbook magic, good at studies, goes insane later maybe, rival of mc(?) <-- makes people sus her
@@ -62,9 +63,13 @@ default stay_at_cemetary = False
 define npc = Character('npc')
 default figgly = Character('Professor Figgly')
 
+#constants
+define fade = Fade(0.5, 0.0, 0.5)
+
 
 #vision of apocalypse/introsduction
 label start:
+    $name = renpy.input("what will you name yourself?", length=20)
     #cutscene of vision
 
     show vision_1
@@ -99,7 +104,7 @@ label intro:
 
     you "Ugh, what the heck Helio?!"
 
-    Helio "CAWWWW"
+    Helio "CAWWWW!"
 
     "Helio drops a pile of scrolls that it was carrying in it's claws on your face and lands gently on your stomach."
 
@@ -111,7 +116,7 @@ label intro:
 
 # You wake up and start reading the mail
 label look_at_the_mail:
-    you "ugh okay okay."
+    you "Ugh okay okay."
 
     "You sit up tiredly, rubbing your eyes, knowing that Helio will start pecking you again if you don't wake up."
 
@@ -135,7 +140,7 @@ label go_back_to_sleep:
 label read:
     "You sign, slowly opening up the scroll, reading,"
 
-    "\"Dear __, Congratulations! Fortunately a spot has recently opened up for you to attend the magic academy! Hope to see you there!\"" #fix 
+    "\"Dear [name], Congratulations! Fortunately a spot has recently opened up for you to attend the magic academy! Hope to see you there!\"" #fix 
 
     "\" Sincerely, Headmaster Dean."
 
@@ -209,7 +214,7 @@ label open:
 
     npc "?"
 
-    npc "Oh! You must be _____! The new student, correct?"
+    npc "Oh! You must be [name]! The new student, correct?"
 
     menu:
         "Yep thats me!":
@@ -288,7 +293,7 @@ label knock:
             jump introduce_yourself
 
 label introduce_yourself:
-    you "My name's _____, nice to meet you all..."
+    you "My name's [name], nice to meet you all..."
 
     "an awkward silence passes."
 
@@ -344,7 +349,7 @@ label first_class:
 
     "Students all start rushing out the cafeteria."
 
-    io "_____, me and Zaelf have potion making class now so we'll see you guys back at the dorm!"
+    io "[name], me and Zaelf have potion making class now so we'll see you guys back at the dorm!"
 
     menu:
         "See you!":
@@ -367,6 +372,8 @@ label small_talk:
     faerin "We're here."
 
     "Faerin gestures towards a door with a plaque that reads \"Spell Casting 101\""
+
+    "Guess she isn't a big fan of talking."
     
     jump spell_casting
 
@@ -385,21 +392,186 @@ label spell_casting:
 
     figgly "Once again, I am your Spell Casting professor, Professor Figgly!"
 
+    menu:
+        "What type of name is Figgly?":
+            faerin "..."
+
+            "She doesn't say another but you can see her trying stiffle a laugh."
+
     figgly "Today, we'll be learning..."
 
     figgly "...a new spell!"
 
-    figgle "I've decided on four basic level spells that you can choose from, after that split up into the groups that want to learn the same spell as you."
+    figgly "I've decided on four basic level spells that you can choose from, after that split up into the groups that want to learn the same spell as you."
 
     menu:
-        "I want to learn the PLACEHOLDER spell":
+        "I want to learn the light spell":
             jump learning
 
 label learning:
+    "You get put into groups."
 
-#you receive your first assignment as a squad 
+    "Surpisingly Faerin is also there."
 
-# you 
+    faerin "Stop following me."
+
+    menu:
+        "I'm not following anyone.":
+            you "Why would I ever want to follow you?"
+
+        "Sorry.":
+            you "Sorry."
+
+    faerin "Whatever."
+
+    figgly "Wonderful! Now that you are put into teams, you will venture out and find the elusive exclusive amazing..."
+
+    figgly "Drum roll please~"
+
+    "Random person" "Just tell us already you old man."
+
+    figgly "That's not very nice."
+
+    "The professor looks down, a bit saddened."
+
+    menu: 
+        "Try to cheer him up.":
+            "You start pitter pattering on the table to create a drum roll."
+
+            "His expression cheers up."
+
+            "Faerin looks at you a bit nicer now."
+
+            "You take that as a win."
+
+        "Point and laugh.":
+            "You start laughing at him."
+
+            "He hears the laughter but ignores it."
+
+            faerin "..."
+
+            "You have lost favour with faerin."
+
+    figgly "Continuing, each of you in your pairs will be sent to complete various tasks associated with the spell you have chosen."
+
+    "You watch as he begins to walk around, handing out various assignment sheets."
+
+    figgly "Ahh Faerin! I trust you will be able to do this well."
+
+    "He looks at you."
+
+    figgly "[name]? Was it? I hope you can follow in her footsteps."
+
+    faerin "I will ensure we accomplish this to the best of our abilities."
+
+    figgly "Mm."
+
+    "He nods before walking away."
+
+    "You look down to read the assignemnt."
+
+    show assignment paper 
+
+    faerin "This should be simple enough."
+
+    jump assignment_mission 
+
+
+##its supposed to go learn spell (keep of what track spell u learn) --> get first mission to find the flower --> go to get supplies --> someone from evil faction tries to smuffle u stuff --> 
+#if u say yes u get a new spell if u say no faerin gets affected -->big boss battle that almost kills ur friends --> if u choose to use the new (artifical) spell (big damage) u get affected, 
+#if not ur friends just get very ingjured or one of them can die idc --> if u get affected io helps u and u get brought to the dark side and u dont then u dont uh
+# also the reason why faerin dont like u in the beginning is cus uxie went missing and they replaced her with u so quick so faerin dont like u + 
+# the school but io is ok with u cus she knows uxie is alive just in the evil faction and lowkey zaelf is just chillin cus hes nonchalant idk bro
+label assignment_mission: 
+    faerin "We need to find Hexaria's flower."
+
+    faerin "They are abundant at this time so there shouldn't be any issues."
+
+    you "Oh, that's nice."
+
+    faerin "Yeah."
+
+    faerin "Whatever, just try not to mess things up."
+
+    "She walks ahead of you."
+
+    "As you continue walking you reach a village."
+    
+    "It's located near the outskirts of town near, nearby the location of Hexaria's flower."
+
+    faerin "Willowsburrow is nice towards newcomers, especially students so we shouldn't have any trouble."
+
+    faerin "Just try to stay away from-"
+
+    "You can't hear what she says as you get distracted from the village enterance in front of you."
+
+    "Flowers line the walls, with children laughing and running around."
+
+    "Faerin gestures you to follow her."
+
+    faerin "I'll go grab the flower, you can just... stay here I guess."
+
+    menu:
+        "No I want to go with you.":
+            jump go_with_faerin
+
+        "Fine, I'll stay here.":
+            jump get_mugged 
+
+label go_with_faerin:
+    faerin "Fine."
+
+    faerin "Don't get in my way."
+
+    "You walk towards the back of the village a tiny gate blocks enterance."
+
+    "Guard" "Hello how can I help you two?"
+
+    faerin "We were wondering if we could get a flower for our assignment."
+
+    "Guard" "Certainly, although for security reasons we will need to see proof of the assignment."
+
+    "Guard" "I assume your professor has given a written permission slip?"
+
+    menu:
+        "Permission slip?!":
+            you "Um- I-"
+
+            faerin "Here it is."
+
+            "Gaurd" "Ah perfect!"
+
+        "Yeah it's right here!":
+            "You pull out a blank paper."
+
+            "you could've sworn you placed it in your pocket."
+
+            "Gaurd" "Sorry ma'am, but that is a blank sheet of paper."
+
+            faerin "Excuse her, here it is."
+
+            "Gaurd" "Ah perfect!"
+
+    "The gaurd opens the the gate."
+
+    "Gaurd" "Please limit yourself to only one."
+
+    faerin "Yes."
+
+    "Faerin goes to pick the flower."
+
+    "You walk back out of the flowered section, not wanting to cause her more trouble."
+
+    jump get_mugged
+
+label get_mugged: 
+    "As you wait outside, two muscular men approach behind you."
+
+    "???" "Hey there..."
+'''
+BREAK BREAK BREAK BREAK inc 
+'''
 
 #choice to recall memories
 menu: 
@@ -844,10 +1016,11 @@ label part_5:
 
     librarian "How many times have I told those first years to be careful!"
 
-    hide librarian
+    hide librarian angry 
 
     "You manage to quickly take the book and slip out of the library with the book in hand."
     
+    show book 
     menu: 
         "Open the book.":
             jump hexaria_story
@@ -908,12 +1081,13 @@ label part_6:
 
     orryx "I don't want to continue anymore. No matter what I do I can't change anything."
 
-    orryx "Who am I kidding... they'll probably be done the mission."
+    orryx "Who am I kidding... they'll probably be done the mission and get themselves killed as a part of it."
 
     orryx "If you were here you'd probably be scolding me for not believing in our friends." 
 
-    you "You feel a vision come to you." #FIX THIS TRANSISTION LOL SO BAD
+    you "You feel a vision come to you."
 
+    scene fade with black 
     jump uxie_story_1
 
 label part_7: 
@@ -924,9 +1098,8 @@ label part_7:
     "His chest was still rising and falling, but he looked ill."
 
     menu:
-        "Try to heal him."
-    
-    "You hold out both your hands as a yellow glow emitts from them."
+        "Try to heal him.":
+            "You hold out both your hands as a yellow glow emitts from them."
 
     "You see as the bags under his eyes seem to fade and his breathing returns to normal." 
     
@@ -936,7 +1109,9 @@ label part_7:
 
     "He springs up immediately and begins looking around frantically."
 
-    orryx "UXIE? WHERE? WHAT?"
+    menu: 
+        "Get up Orryx, please.":
+            orryx "UXIE? WHERE? WHAT?"
 
     orryx "I must've been dreaming."
 
@@ -944,7 +1119,14 @@ label part_7:
 
     orryx "Man I guess I really needed that rest."
 
-    #continue 
+    orryx "I hope I'm not too late."
+
+    "He continues to venture towards where you assume the direction of Willowsborrow is."
+
+    jump part_7
+
+label part_7: 
+    
 
 #character background info, could probably split these into multiple parts that you find out later
 #(don't have to discover all of their full backstories, player should want to choose who they think the imposter is)
@@ -1046,8 +1228,8 @@ label zaelf_story_1:
 
     "Zaelf was always a good listener."
 
-    fade with black 
-    show classroom 
+    scene black with fade 
+    scene classroom 
 
     uxie "Sweet! We get to work with turkey tangle frogfruit!"
 
@@ -1127,7 +1309,7 @@ label azer_story_1:
 
     "Which leads us to wonder how he ended up in this situation."
 
-    fade with black 
+    scene black with fade 
 
     "A few moments ago..."
 
@@ -1431,7 +1613,7 @@ label io_backstory:
 
     show io hovering over someone 
 
-    #jump to wherver 
+    #jump to netx
     
 
 
